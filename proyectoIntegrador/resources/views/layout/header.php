@@ -11,9 +11,9 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-            <header class="bg-dark nav" >
-                <h1 class="text-light">Tienda mates</h1>
-                <div class="text-light">
+            <header class="bg-black navbar h-100" >
+                <h1 class="text-light navbar-brand ms-5 p-0">Tienda mates</h1>
+                <div class="text-light d-flex gap-4">
                     <a href="/">Inicio</a>
                     <div>
                         <p>Productos</p>
@@ -21,7 +21,7 @@
                     <a>Sobre nosotros</a>
                     <a>Contacto</a>
                 </div>
-                <p class="text-light">Buscar</p>
+                <p class="text-light me-5 p-0">Buscar</p>
             <!-- <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Home</button>
