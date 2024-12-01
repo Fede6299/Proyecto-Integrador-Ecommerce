@@ -21,16 +21,71 @@
                     <a>Sobre nosotros</a>
                     <a>Contacto</a>
                 </div>
-                <p class="text-light me-5 p-0">Buscar</p>
-            <!-- <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Home</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Profile</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">Contact</button>
-                </li>
-                </ul> -->
+                <form class="position-relative">
+            <!-- Input de búsqueda -->
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        placeholder="Buscar..." 
+                        id="searchInput" 
+                        autocomplete="off" 
+                        oninput="filterList()"
+                    >
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="dropdownMenu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </form>
+                
             </header>
+
+
+
+
+
+
+
+            
+            <script>
+                //esto no queda definitivo ya que es un codigo generado por chatgpt para probar si podia hacer un dropdown con filtro
+                //faltaria pensar en la funcionalidad de busqueda al back 
+        const searchInput = document.getElementById("searchInput");
+        const dropdownMenu = document.getElementById("dropdownMenu");
+        const items = Array.from(dropdownMenu.querySelectorAll("li"));
+
+        // Filtrar las opciones del dropdown
+        function filterList() {
+            const query = searchInput.value.toLowerCase();
+            let hasResults = false;
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = "block";
+                    hasResults = true;
+                } else {
+                    item.style.display = "none";
+                }
+            });
+
+            dropdownMenu.style.display = hasResults ? "block" : "none";
+        }
+
+        // Seleccionar una opción del dropdown
+        dropdownMenu.addEventListener("click", (e) => {
+            if (e.target.classList.contains("dropdown-item")) {
+                searchInput.value = e.target.textContent;
+                dropdownMenu.style.display = "none";
+            }
+        });
+
+        // Ocultar la lista si haces clic fuera del dropdown o input
+        document.addEventListener("click", (e) => {
+            if (!dropdownMenu.contains(e.target) && e.target !== searchInput) {
+                dropdownMenu.style.display = "none";
+            }
+        });
+    </script>
+
+     
