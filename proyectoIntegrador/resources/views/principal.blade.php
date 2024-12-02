@@ -27,6 +27,23 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<section class="elements">
+  <div>
+    <i class="las la-credit-card"></i>
+    <p class="element-text">MEDIOS DE PAGO</p>
+    <p class="sub-text">Efectivo, transferencia, tarjeta de débito.</p>
+  </div>
+  <div>
+    <i class="las la-shopping-bag"></i>
+    <p class="element-text">COMPRA EN ENFECTIVO</p>
+    <p class="sub-text">10% OFF Min. $10.000</p>
+  </div>
+  <div>
+    <i class="las la-truck"></i>
+    <p class="element-text">ENVIOS A TODO EL PAIS</p>
+    <p class="sub-text">por el transporte de tu preferencia, en 72hs</p>
+  </div>
+</section>
 </main>
 
 

@@ -1,0 +1,25 @@
+.la-credit-card, .la-shopping-bag, .la-truck{
+    font-size: 50px;
+    color: black;
+}
+
+.elements {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.elements div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.element-text {
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+.sub-text {
+    color: gray;
+}
