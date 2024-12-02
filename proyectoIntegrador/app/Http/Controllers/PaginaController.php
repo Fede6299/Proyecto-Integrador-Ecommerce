@@ -6,8 +6,20 @@ use Illuminate\Container\Attributes\Storage;
 
 
 class PaginaController extends Controller{
-    public function indexa(){
-
+    public function index(){
         return view("principal");
+    }
+
+    public function catProductos(){
+        return view("productos");
+    }
+    public function sobreNosotros(){
+        return view("sobreNosotros");
+    }
+    public function contacto(){
+        return view("contacto");
+    }
+    public function loginAdm(){
+        return view("loginAdm");
     }
 }
