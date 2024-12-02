@@ -15,7 +15,7 @@
                 <div class="text-light d-flex gap-4">
                     <a href="/">Inicio</a>
                     <div>
-                        <a href="/productos">Productos</a>
+                        <a href="/productos/ver-todo">Productos</a>
                     </div>
                     <a href="/sobre-nosotros">Sobre nosotros</a>
                     <a href="/contacto">Contacto</a>

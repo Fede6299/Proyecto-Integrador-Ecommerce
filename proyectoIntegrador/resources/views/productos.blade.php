@@ -1,3 +1,3 @@
 @include('/layout/header')
-<h2>Productos</h2>
+<h2>Productos{{ $categoria_id}} </h2>
 @include('/layout/footer')
