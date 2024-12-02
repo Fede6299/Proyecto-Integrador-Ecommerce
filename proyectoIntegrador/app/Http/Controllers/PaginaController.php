@@ -9,9 +9,8 @@ class PaginaController extends Controller{
     public function index(){
         return view("principal");
     }
-
-    public function catProductos(){
-        return view("productos");
+    public function catProductos($categoria_id){
+        return view("productos",['categoria_id' => $categoria_id]);
     }
     public function sobreNosotros(){
         return view("sobreNosotros");

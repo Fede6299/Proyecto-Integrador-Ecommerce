@@ -1,5 +1,5 @@
 @include('/layout/header')
-<h2>Productos</h2>
+<h2>Productos{{ $categoria_id}} </h2>
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
       <div class="card">
