@@ -16,9 +16,9 @@
                 <h1 class="text-light navbar-brand ms-5 p-0">Tienda mates</h1>
                 <div class="text-light d-flex gap-4">
                     <a href="/">Inicio</a>
-                    <div>
+                    
                         <a href="/productos/ver-todo">Productos</a>
-                    </div>
+                    
                     <a href="/sobre-nosotros">Sobre nosotros</a>
                     <a href="/contacto">Contacto</a>
                 </div>

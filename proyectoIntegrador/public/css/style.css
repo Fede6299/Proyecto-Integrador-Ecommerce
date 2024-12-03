@@ -56,3 +56,36 @@
 }
 
 
+
+
+/* sobreNosotros*/
+.tituloNosotros{
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 125% */
+
+}
+.lead {
+    text-align: justify;
+    line-height: 1.6; /* Espaciado entre líneas */
+    font-weight:600; /* Todo el texto estará en negrita */
+    color: #252525;
+    font-size: 16px;
+    font-style: normal;
+
+  }
+
+.main-text{
+   margin-bottom: 50px; /* Ajusta el espacio entre el texto y las tarjetas */
+   
+}
+.col-lg-4 {
+    text-align: center; /* Centra el texto */
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en una columna */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+
