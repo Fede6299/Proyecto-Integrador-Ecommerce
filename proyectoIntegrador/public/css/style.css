@@ -23,3 +23,36 @@
 .sub-text {
     color: gray;
 }
+
+
+/* Estilo base de los enlaces */
+.text-light a {
+    text-decoration: none; /* Sin subrayado predeterminado */
+    color: #fafaf8; /* Color claro para el texto (puedes ajustarlo según tu diseño) */
+    position: relative; /* Necesario para el efecto */
+    padding: 5px 0;
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+/* Pseudo-elemento para el efecto */
+.text-light a::after {
+    content: ''; /* Pseudo-elemento vacío */
+    position: absolute; /* Posicionamiento relativo al enlace */
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Grosor de la línea */
+    background:#c47249; /* Color de la línea (puedes ajustarlo) */
+    transition: width 0.3s ease; /* Animación del ancho */
+}
+
+/* Cambio de color y subrayado al hacer hover */
+.text-light a:hover {
+    color: #c47249;/* Cambia el color del texto al pasar el mouse */
+}
+
+.text-light a:hover::after {
+    width: 100%; /* Expande la línea subrayada al 100% */
+}
+
+
