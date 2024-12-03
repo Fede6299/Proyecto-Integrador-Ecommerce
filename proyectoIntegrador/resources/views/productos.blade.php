@@ -1,5 +1,12 @@
 @include('/layout/header')
 <h2>Productos{{ $categoria_id}} </h2>
+
+@foreach($productos as $producto)
+
+<h3>{{$producto->descripcion}}</h3>
+<p>{{$producto->categorias->categoria ?? "sin categoria"}}</p>
+<p>${{$producto->precio}}</p>
+@endforeach
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
       <div class="card">

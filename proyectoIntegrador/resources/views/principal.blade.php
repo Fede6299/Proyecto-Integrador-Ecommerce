@@ -27,6 +27,13 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<section>
+  <h2>Productos destacados</h2>
+  @foreach($destacados as $destacado)
+    <h3>{{$destacado->producto->descripcion}}</h3>
+    
+  @endforeach
+</section>
 <section class="elements">
   <div>
     <i class="las la-credit-card"></i>
