@@ -30,7 +30,7 @@
 <section>
   <h2>Productos destacados</h2>
   @foreach($destacados as $destacado)
-    <h3>{{$destacado->producto->descripcion}}</h3>
+  <h3>{{ $destacado->producto?->descripcion ?? 'Producto no disponible' }}</h3>
     
   @endforeach
 </section>

@@ -20,7 +20,7 @@
                 <label for="comentarios">Comentarios</label>
                 <textarea id="comentarios" name="comentarios" rows="4" placeholder="Comentarios" required></textarea>
             </div>
-            <button type="submit">Enviar</button>
+            <button class="botonEnviar" type="submit">Enviar</button>
         </form>
     </div>
 </div>
