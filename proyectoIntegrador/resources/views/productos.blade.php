@@ -4,7 +4,17 @@
 @foreach($productos as $producto)
 
 <h3>{{$producto->descripcion}}</h3>
-<p>{{$producto->categorias->categoria ?? "sin categoria"}}</p>
+<p>
+      <?php 
+        if($producto->categorias->isNotEmpty())
+            foreach($producto->categorias as $categoria){
+            echo ($categoria->categoria);}
+            
+        else{
+            echo "Sin categoría";
+          }        
+        ?>
+    </p>
 <p>${{$producto->precio}}</p>
 @endforeach
 <div class="row row-cols-1 row-cols-md-3 g-4">

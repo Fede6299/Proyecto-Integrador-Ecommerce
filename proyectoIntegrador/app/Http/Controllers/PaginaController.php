@@ -17,14 +17,14 @@ class PaginaController extends Controller{
         return view("principal",["destacados" => $destacados]);
     }
     public function catProductos($categoria_nombre){
-        // var_dump(NombreLink::where("nombreLink", 'LIKE', "%mate%")->get());
+ 
         if($categoria_nombre != "ver-todo"){
-            $productos =NombreLink::where("nombreLink", 'LIKE', "%$categoria_nombre%")->get();
+            $productos =Producto::whereHas('categorias', function ($query) use ($categoria_nombre)  {
+                $query->where('categorias.categoria','LIKE', "$categoria_nombre");
+            })->get();
         }else{
-            $productos = Producto::all();
-
+            $productos = Producto::with("categorias")->get();
         }
-        // $productos = DB::table("productos")->select('*')->get();
 
         $parametros=[
             "categoria_id" => $categoria_nombre,

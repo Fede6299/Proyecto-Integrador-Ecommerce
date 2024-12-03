@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Producto extends Model
 {
@@ -11,7 +12,7 @@ class Producto extends Model
     protected $primaryKey = "id_mate";
     public $timestamps = false;
     
-    public function categorias():BelongsTo{
-        return $this->belongsTo(Categoria::class, 'id_mate','id_categoria' );
+    public function categorias():BelongsToMany{
+        return $this->belongsToMany(Categoria::class,'producto_categoria','id_producto','id_categoria' );
     }
 }
