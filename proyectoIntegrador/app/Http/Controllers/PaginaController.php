@@ -5,9 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Destacados;
 use App\Models\NombreLink;
 use App\Models\Producto;
-use Illuminate\Container\Attributes\Storage;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+
 
 
 class PaginaController extends Controller{
