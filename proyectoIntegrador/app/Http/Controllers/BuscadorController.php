@@ -10,9 +10,7 @@ class BuscadorController extends Controller
 {
     public function buscarApi ($queryLink){
 
-        $productosBusqueda = NombreLink::whereHas('producto', function($query) use ($queryLink){
-            $query->where('nombreLink', 'LiKE' ,"%$queryLink%");
-        } )->with('producto')->get();
+        $productosBusqueda = NombreLink::where('nombreLink', 'LiKE' ,"%$queryLink%")->get();
         
         return response()->json($productosBusqueda);
     }
