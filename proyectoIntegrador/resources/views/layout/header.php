@@ -12,8 +12,8 @@
         <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
         <link rel="stylesheet" href="css/style.css">
         <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-            <header class="bg-black navbar h-100" >
-                <h1 class="text-light navbar-brand ms-5 p-0">Tienda mates</h1>
+            <header class="bg-black navbar h-100 d-flex justify-content-around" >
+                <h1 class="text-light navbar-brand mx-0 p-0">Tienda mates</h1>
                 <div class="text-light d-flex gap-4">
                     <a href="/">Inicio</a>
                     
@@ -22,7 +22,7 @@
                     <a href="/sobre-nosotros">Sobre nosotros</a>
                     <a href="/contacto">Contacto</a>
                 </div>
-                <section class="position-relative">
+                <section class="position-relative ">
             <!-- Input de búsqueda -->
                     <input 
                         type="text" 
