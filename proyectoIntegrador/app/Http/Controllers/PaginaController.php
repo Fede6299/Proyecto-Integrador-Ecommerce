@@ -14,6 +14,7 @@ class PaginaController extends Controller{
     
         return view("principal",["destacados" => $destacados]);
     }
+    
     public function catProductos($categoria_nombre){
  
         if($categoria_nombre != "ver-todo"){

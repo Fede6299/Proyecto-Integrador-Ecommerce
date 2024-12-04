@@ -22,7 +22,7 @@
                     <a href="/sobre-nosotros">Sobre nosotros</a>
                     <a href="/contacto">Contacto</a>
                 </div>
-                <form class="position-relative">
+                <section class="position-relative">
             <!-- Input de búsqueda -->
                     <input 
                         type="text" 
@@ -33,60 +33,13 @@
                         oninput="filterList()"
                     >
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="dropdownMenu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
-                </form>
+                </section>
                 
             </header>
+            <main class="container">
 
 
 
 
 
-
-
-            
-            <script>
-                //esto no queda definitivo ya que es un codigo generado por chatgpt para probar si podia hacer un dropdown con filtro
-                //faltaria pensar en la funcionalidad de busqueda al back 
-        const searchInput = document.getElementById("searchInput");
-        const dropdownMenu = document.getElementById("dropdownMenu");
-        const items = Array.from(dropdownMenu.querySelectorAll("li"));
-
-        // Filtrar las opciones del dropdown
-        function filterList() {
-            const query = searchInput.value.toLowerCase();
-            let hasResults = false;
-
-            items.forEach(item => {
-                const text = item.textContent.toLowerCase();
-                if (text.includes(query)) {
-                    item.style.display = "block";
-                    hasResults = true;
-                } else {
-                    item.style.display = "none";
-                }
-            });
-
-            dropdownMenu.style.display = hasResults ? "block" : "none";
-        }
-
-        // Seleccionar una opción del dropdown
-        dropdownMenu.addEventListener("click", (e) => {
-            if (e.target.classList.contains("dropdown-item")) {
-                searchInput.value = e.target.textContent;
-                dropdownMenu.style.display = "none";
-            }
-        });
-
-        // Ocultar la lista si haces clic fuera del dropdown o input
-        document.addEventListener("click", (e) => {
-            if (!dropdownMenu.contains(e.target) && e.target !== searchInput) {
-                dropdownMenu.style.display = "none";
-            }
-        });
-    </script>
-
-     

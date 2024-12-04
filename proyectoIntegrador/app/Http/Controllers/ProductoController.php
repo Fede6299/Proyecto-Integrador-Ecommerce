@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ProductoController extends Controller
 {
-    public function index(){
-        return view("producto");
+    public function index($queryLink){
+        return view("producto",["queryLink" => $queryLink]);
     }
 }
