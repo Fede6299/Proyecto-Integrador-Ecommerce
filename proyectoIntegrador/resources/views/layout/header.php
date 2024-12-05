@@ -14,14 +14,25 @@
         <body class="font-sans antialiased dark:bg-black dark:text-white/50">
             <header class="bg-black navbar h-100 d-flex justify-content-around" >
                 <h1 class="text-light navbar-brand mx-0 p-0">Tienda mates</h1>
+
+                <ul class="nav nav-pills" >
+                    <li class="nav-item"><a href="/" class="nav-link fw-semibold" style="color:#c47249; " >Inicio</a></li>
+                    <li class="nav-item"><a href="/productos/ver-todo" class="nav-link fw-semibold" style="color:#c47249;">Productos</a></li>
+                    <li class="nav-item"><a href="/sobre-nosotros" class="nav-link fw-semibold" style="color:#c47249;">Sobre nosotros</a></li>
+                    <li class="nav-item"><a href="/contacto" class="nav-link fw-semibold" style="color:#c47249;">Contacto</a></li>
+                </ul>
+
+                <!-- PROBLEMA CON EL ESTILO PARA PRODUCTOS              
                 <div class="text-light d-flex gap-4">
+                    
                     <a href="/">Inicio</a>
                     
                         <a href="/productos/ver-todo">Productos</a>
                     
                     <a href="/sobre-nosotros">Sobre nosotros</a>
                     <a href="/contacto">Contacto</a>
-                </div>
+                </div>-->
+
                 <section class="position-relative ">
             <!-- Input de búsqueda -->
                     <input 
