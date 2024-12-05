@@ -15,4 +15,7 @@ class Producto extends Model
     public function categorias():BelongsToMany{
         return $this->belongsToMany(Categoria::class,'producto_categoria','id_producto','id_categoria' );
     }
+    public function nombreLink():BelongsTo{
+        return $this->belongsTo(NombreLink::class,'id_mate','id_producto' );
+    }
 }

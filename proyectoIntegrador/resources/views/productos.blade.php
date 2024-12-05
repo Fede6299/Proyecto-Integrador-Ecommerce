@@ -2,6 +2,8 @@
 <h2>Productos{{ $categoria_id}} </h2>
 
 @foreach($productos as $producto)
+<a href="/productos/producto/<?php echo $producto->nombreLink->nombreLink ?? "#" ?>">
+
 
 <h3>{{$producto->descripcion}}</h3>
 <p>
@@ -17,6 +19,7 @@
     </p>
 <p>${{$producto->precio}}</p>
 @endforeach
+</a>
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
       <div class="card">
