@@ -1,7 +1,9 @@
 const input = document.getElementById('searchInput')
+const URL = window.location.origin;
+
 const buscar =async (query)=>{
     try {
-        const response = await fetch(`http://localhost:8000/buscar/productos/${query}`);
+        const response = await fetch(`${URL}/buscar/productos/${query}`);
     const data = response.json();
     return data;
     } catch (error) {
@@ -58,7 +60,7 @@ dropdownMenu.addEventListener("click", (e) => {
     if (e.target.classList.contains("liProduct")) {
         searchInput.value = e.target.textContent;
         dropdownMenu.style.display = "none";
-        window.location = "http://localhost:8000/productos/producto/"+strToKebabCase(e.target.textContent)
+        window.location = `${URL}/productos/producto/${strToKebabCase(e.target.textContent)}`
     }
 });
 
