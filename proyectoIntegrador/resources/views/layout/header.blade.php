@@ -24,14 +24,11 @@
                 </ul> -->
 
                 <!-- PROBLEMA CON EL ESTILO PARA PRODUCTOS               -->
-                <div class="text-light d-flex gap-4">
-                    
-                    <a href="/">Inicio</a>
-                    
-                        <a href="/productos/ver-todo">Productos</a>
-                    
-                    <a href="/sobre-nosotros">Sobre nosotros</a>
-                    <a href="/contacto">Contacto</a>
+                <div class="text-light d-flex gap-4">           
+                    <a href="{{ url('/') }}">Inicio</a>
+                    <a href="{{ url('/productos/ver-todo') }}">Productos</a>
+                    <a href="{{ url('/sobre-nosotros') }}">Sobre nosotros</a>
+                    <a href="{{ url('/contacto') }}">Contacto</a>
                 </div>
 
                 <section class="position-relative ">
