@@ -1,0 +1,157 @@
+.la-credit-card, .la-shopping-bag, .la-truck{
+    font-size: 50px;
+    color: black;
+}
+
+.elements {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.elements div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.element-text {
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+.sub-text {
+    color: gray;
+}
+
+
+/* Estilo base de los enlaces */
+
+
+.text-light a {
+    text-decoration: none; /* Sin subrayado predeterminado */
+    color: #fafaf8; /* Color claro para el texto (puedes ajustarlo según tu diseño) */
+    position: relative; /* Necesario para el efecto */
+    padding: 5px 0;
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+/* Pseudo-elemento para el efecto */
+.text-light a::after {
+    content: ''; /* Pseudo-elemento vacío */
+    position: absolute; /* Posicionamiento relativo al enlace */
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Grosor de la línea */
+    background:#c47249; /* Color de la línea (puedes ajustarlo) */
+    transition: width 0.3s ease; /* Animación del ancho */
+}
+
+/* Cambio de color y subrayado al hacer hover */
+.text-light a:hover {
+    color: #c47249;/* Cambia el color del texto al pasar el mouse */
+}
+
+.text-light a:hover::after {
+    width: 100%; /* Expande la línea subrayada al 100% */
+}
+
+/* SOBRE NOSOTROS*/
+
+.tituloNosotros{
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 125% */
+
+}
+.lead {
+    text-align: justify;
+    line-height: 1.6; /* Espaciado entre líneas */
+    font-weight:600; /* Todo el texto estará en negrita */
+    color: #252525;
+    font-size: 16px;
+    font-style: normal;
+
+  }
+
+.main-text{
+   margin-bottom: 50px; /* Ajusta el espacio entre el texto y las tarjetas */
+   
+}
+.col-lg-4 {
+    text-align: center; /* Centra el texto */
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en una columna */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+
+
+/* CONTACTOS*/
+
+/*uso de flexores en la caja cuerpoContato */
+.cuerpoContato{
+    display: flex;
+    flex-direction: column; /* para cambiar de eje primordial*/
+    align-items: center;    /*ese eje elegido que es el "y", va acompañado de esta directiva*/
+}
+.tituloContacto{
+    margin: 30px ;
+    font-family: Arial; 
+    color: #333;
+}
+.contact-form-container {
+    background-color: #fff; /* Fondo blanco para el formulario */
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px; /* Máximo ancho */   
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.contact-form-container  {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.botonEnviar {
+    background-color: #FF6A13;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.botonEnviar:hover {
+    background-color: #e05a0f;
+}
