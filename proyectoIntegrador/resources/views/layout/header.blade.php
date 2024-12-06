@@ -31,7 +31,7 @@
                     <a href="{{ url('/contacto') }}">Contacto</a>
                 </div>
 
-                <section class="position-relative ">
+                <section class="position-relative width-search">
             <!-- Input de búsqueda -->
                     <input 
                         type="text" 
@@ -41,7 +41,7 @@
                         autocomplete="off" 
                         oninput="filterList()"
                     >
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="dropdownMenu">
+                    <ul class="dropdown-menu bg-black width-search" aria-labelledby="dropdownMenuButton1" id="dropdownMenu">
                     </ul>
                 </section>
                 

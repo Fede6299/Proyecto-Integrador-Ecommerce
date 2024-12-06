@@ -46,9 +46,23 @@ const filterList = async()=> {
 
     data.forEach(element => {
         let li = document.createElement("li")
-        li.textContent = formatFromKebabCase(element.nombreLink)
+        let p = document.createElement("p")
+        let img= document.createElement("img")
+        img.src= `${URL}/storage/img/producto/mate.webp`
+        img.classList.add("imgSearch")
+
+
+        p.textContent = formatFromKebabCase(element.nombreLink)
+        p.classList.add("width-search")
+
+
         li.style.display="block"
         li.classList.add("liProduct")
+        // li.classList.add("dropdown-item")
+        
+        li.appendChild(img)
+        li.appendChild(p)
+      
         dropdownMenu.appendChild(li)
         hasResults = true
     });
@@ -57,7 +71,7 @@ const filterList = async()=> {
 
 }
 dropdownMenu.addEventListener("click", (e) => {
-    if (e.target.classList.contains("liProduct")) {
+    if (e.target.classList.contains("width-search")) {
         searchInput.value = e.target.textContent;
         dropdownMenu.style.display = "none";
         window.location = `${URL}/productos/producto/${strToKebabCase(e.target.textContent)}`
