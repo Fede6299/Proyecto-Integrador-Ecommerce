@@ -13,16 +13,6 @@ const buscar =async (query)=>{
     
 }
 
-const validador = async(e)=>{
-    
-    let busqueda= e.target.value;
-    console.log(busqueda.trim().length);
-    if(busqueda.trim().length !== 0){
-        console.log( await buscar(busqueda));
-    }
-    
-}
-
 // input.addEventListener('keyup',onchange)
 
 const formatFromKebabCase = (str) => {
@@ -31,8 +21,7 @@ const formatFromKebabCase = (str) => {
 const strToKebabCase = (str) => {
     return str.toLowerCase().trim().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g,'-');
 }
-//esto no queda definitivo ya que es un codigo generado por chatgpt para probar si podia hacer un dropdown con filtro
-//faltaria pensar en la funcionalidad de busqueda al back 
+
 const dropdownMenu = document.getElementById("dropdownMenu");
 // const items = Array.from(dropdownMenu.querySelectorAll("li"));
 
@@ -79,28 +68,6 @@ dropdownMenu.addEventListener("click", (e) => {
 });
 
 
-// Filtrar las opciones del dropdown
-// function filterList() {
-//     const query = input.value.toLowerCase();
-//     let hasResults = false;
-
-//     items.forEach(item => {
-//         const text = item.textContent.toLowerCase();
-//         if (text.includes(query)) {
-//             item.style.display = "block";
-//             hasResults = true;
-//         } else {
-//             item.style.display = "none";
-//         }
-//     });
-
-//     dropdownMenu.style.display = hasResults ? "block" : "none";
-// }
-
-// Seleccionar una opción del dropdown
-
-
-// Ocultar la lista si haces clic fuera del dropdown o input
 document.addEventListener("click", (e) => {
     if (!dropdownMenu.contains(e.target) && e.target !== searchInput) {
         dropdownMenu.style.display = "none";
