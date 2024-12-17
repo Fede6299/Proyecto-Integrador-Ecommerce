@@ -24,6 +24,14 @@
     color: gray;
 }
 
+.dropdown-menu {
+    background: black;
+}
+
+.dropdown-item:hover {
+    background-color: black;
+}
+
 
 /* Estilo base de los enlaces */
 

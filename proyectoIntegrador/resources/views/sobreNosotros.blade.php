@@ -11,23 +11,30 @@
 
     <div class="row ">
         
-        <div class="col-lg-4">
+        <div class="col-lg-3">
                  <img src="./img/fede.png" alt="Descripción de la imagen" class="bd-placeholder-img rounded-circle" width="140" height="140">
                  <h2 class="fw-normal">Fede</h2>
                  <p>Descripción breve</p>
                  <p><a class="btn btn-secondary" href="#">Mas detalles (?) »</a></p>
         </div>
   
-         <div class="col-lg-4">
+         <div class="col-lg-3">
                 <img src="./img/gab.png" alt="Descripción de la imagen" class="bd-placeholder-img rounded-circle" width="140" height="140">
                 <h2 class="fw-normal">Gabi</h2>
                 <p>Descripción breve</p>
                 <p><a class="btn btn-secondary" href="#">Mas detalles (?) »</a></p>
          </div>
   
-        <div class="col-lg-4">
+        <div class="col-lg-3">
                 <img src="./img/marcos.png" alt="Descripción de la imagen" class="bd-placeholder-img rounded-circle" width="140" height="140">
                 <h2 class="fw-normal">Marcos</h2>
+                <p>Descripción breve</p>
+                <p><a class="btn btn-secondary" href="#">Mas detalles (?) »</a></p>
+        </div>
+
+        <div class="col-lg-3">
+                <img src="./img/nico.jpg" alt="Descripción de la imagen" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                <h2 class="fw-normal">Nico</h2>
                 <p>Descripción breve</p>
                 <p><a class="btn btn-secondary" href="#">Mas detalles (?) »</a></p>
         </div>

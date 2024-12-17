@@ -26,7 +26,18 @@
                 <!-- PROBLEMA CON EL ESTILO PARA PRODUCTOS               -->
                 <div class="text-light d-flex gap-4">           
                     <a href="{{ url('/') }}">Inicio</a>
-                    <a href="{{ url('/productos/ver-todo') }}">Productos</a>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu px-3">
+                            <li><a class="dropdown-item" href="{{ url('/productos/ver-todo') }}">Ver todo</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/productos/1') }}">Mates</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/productos/2') }}">Termos</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/productos/3') }}">Bombillas</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/productos/4') }}">Accesorios</a></li>
+                        </ul>
+                    </div>
                     <a href="{{ url('/sobre-nosotros') }}">Sobre nosotros</a>
                     <a href="{{ url('/contacto') }}">Contacto</a>
                 </div>
