@@ -1,61 +1,33 @@
 @include('/layout/header')
-<h2>Productos{{ $categoria_id}} </h2>
+<h2>Productos {{ $categoria_id}} </h2>
+<h2 class="tituloContacto">Nuestro catálogo</h2>
 
-@foreach($productos as $producto)
-<a href="/productos/producto/<?php echo $producto->nombreLink->nombreLink ?? "#" ?>">
-
-
-<h3>{{$producto->descripcion}}</h3>
-<p>
-      <?php 
-        if($producto->categorias->isNotEmpty())
-            foreach($producto->categorias as $categoria){
-            echo ($categoria->categoria);}
-            
-        else{
-            echo "Sin categoría";
-          }        
-        ?>
-    </p>
-<p>${{$producto->precio}}</p>
-@endforeach
-</a>
 <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
+@foreach($productos as $producto)
+<div class="col-md-3">
+  <div class="card" >
+    <a href="/productos/producto/<?php echo $producto->nombreLink->nombreLink ?? "#" ?>">
+      <img src="{{ asset('storage/img/producto/mate.webp') }}" class="card-img-top" alt="...">
+    </a>
+    <div class="card-body">
+      <p class="card-text categoria mb-1">
+        <?php 
+          if($producto->categorias->isNotEmpty())
+              foreach($producto->categorias as $categoria){
+              echo ($categoria->categoria); echo ", ";}
+          else{
+              echo "Sin categoría";
+            }        
+        ?>
+      </p>
+      <h5 class="card-title descripcion">{{$producto->descripcion}}</h5>
+      <p class="card-text precio">${{$producto->precio}}</p>
+      <a type="button" class="btn btn-warning btn-naranja" href="/productos/producto/<?php echo $producto->nombreLink->nombreLink ?? "#" ?>">Ver más</a>
     </div>
   </div>
+</div>
+@endforeach
+</div>
+
+
 @include('/layout/footer')
