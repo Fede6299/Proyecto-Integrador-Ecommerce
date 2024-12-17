@@ -4,15 +4,13 @@
 	<div class="d-flex flex-wrap flex-row mb-3 justify-content-center align-items-start gap-3">
 
         <div class="p-2 producto d-flex flex-wrap flex-row miniaturas-box gap-1">
-            <img src="{{ asset('storage/img/producto/mate.webp') }}" class="miniatura" alt="..." width="100" height="100">
-            <img src="{{ asset('storage/img/producto/mate.webp') }}" class="miniatura" alt="..." width="100" height="100">
-            <img src="{{ asset('storage/img/producto/mate.webp') }}" class="miniatura" alt="..." width="100" height="100">
-            <img src="{{ asset('storage/img/producto/mate.webp') }}" class="miniatura" alt="..." width="100" height="100">
-            <img src="{{ asset('storage/img/producto/mate.webp') }}" class="miniatura" alt="..." width="100" height="100">
+            @foreach($producto->imgUrls as $imgUrl)
+            <img src="{{ asset('storage/img/mates/' . $imgUrl) }}" class="miniatura" alt="..." width="100px">
+            @endforeach
 	    </div>
 
-        <div class="p-2 producto">
-            <img src="{{ asset('storage/img/producto/mate.webp') }}" class="bd-placeholder-img" alt="..." width="420" height="420">
+        <div class="p-1 producto">
+            <img src="{{ asset('storage/img/producto/mate.webp') }}" id="imgGrande" class="imgGrande" alt="..." width="420px">
 	    </div>
 
 	    <div class="p-2 producto card">
@@ -43,6 +41,6 @@
 
 	</div>
 
-
+    <script type="text/javascript" src="{{ asset('storage/js/script.js') }}"></script>
 </main>
 @include('/layout/footer')

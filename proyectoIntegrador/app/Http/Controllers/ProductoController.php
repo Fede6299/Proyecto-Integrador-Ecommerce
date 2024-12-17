@@ -13,6 +13,7 @@ class ProductoController extends Controller
             $producto = Producto::where('id_mate', $queryLink)->first();
         else
             $producto = NombreLink::where('nombreLink','LiKE', $queryLink)->with("producto")->first()->producto;
+        $producto->imgUrls = array("1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg"); //TODO
         return view("producto",["producto" => $producto]);
     }
 }
