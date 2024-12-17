@@ -6,7 +6,7 @@
 @foreach($productos as $producto)
 <div class="col-md-3">
   <div class="card" >
-    <a href="/productos/producto/<?php echo $producto->nombreLink->nombreLink ?? "#" ?>">
+    <a href="/productos/producto/<?php echo $producto->nombreLink->nombreLink ?? $producto->id_mate ?>">
       <img src="{{ asset('storage/img/producto/mate.webp') }}" class="card-img-top" alt="...">
     </a>
     <div class="card-body">
@@ -22,7 +22,7 @@
       </p>
       <h5 class="card-title descripcion">{{$producto->descripcion}}</h5>
       <p class="card-text precio">${{$producto->precio}}</p>
-      <a type="button" class="btn btn-warning btn-naranja" href="/productos/producto/<?php echo $producto->nombreLink->nombreLink ?? "#" ?>">Ver más</a>
+      <a type="button" class="btn btn-warning btn-naranja px-5" href="/productos/producto/<?php echo $producto->nombreLink->nombreLink ?? $producto->id_mate ?>">Ver más</a>
     </div>
   </div>
 </div>
