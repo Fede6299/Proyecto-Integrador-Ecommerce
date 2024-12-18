@@ -39,9 +39,12 @@ class PaginaController extends Controller{
         return view("contacto");
     }
     public function loginAdm(){
-        return view("loginAdm");
+        return view("admin.loginAdm");
     }
     public function registrar(){
-        return view("registro");
+        return view("admin.registro");
+    }
+    public function adminProductos(){
+        return view("admin.adminProducto");
     }
 }

@@ -40,6 +40,13 @@
                     </div>
                     <a href="{{ url('/sobre-nosotros') }}">Sobre nosotros</a>
                     <a href="{{ url('/contacto') }}">Contacto</a>
+                    @auth
+                    <form method="POST" action="/logout">
+                        @csrf
+                        <button>Salir</button>
+                    </form>    
+                    @endauth
+                    
                 </div>
 
                 <section class="position-relative width-search">

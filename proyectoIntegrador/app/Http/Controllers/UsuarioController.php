@@ -48,4 +48,8 @@ class UsuarioController extends Controller
         
         return response()->redirectTo("administracion/login")->with("success","Usuario registrado correctamente");
     }
+    public function logout(){
+        Auth::logout();
+        return response()->redirectTo("/");
+    }
 }
