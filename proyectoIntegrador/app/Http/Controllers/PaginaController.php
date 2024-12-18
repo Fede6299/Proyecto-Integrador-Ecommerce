@@ -41,4 +41,7 @@ class PaginaController extends Controller{
     public function loginAdm(){
         return view("loginAdm");
     }
+    public function registrar(){
+        return view("registro");
+    }
 }
