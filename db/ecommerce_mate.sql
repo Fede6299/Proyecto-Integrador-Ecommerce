@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-12-2024 a las 05:42:56
+-- Tiempo de generación: 18-12-2024 a las 05:14:38
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -24,20 +24,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `administradores`
+-- Estructura de tabla para la tabla `admin_user`
 --
 
-CREATE TABLE `administradores` (
+CREATE TABLE `admin_user` (
   `id_admin` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
+  `user_name` varchar(45) NOT NULL,
   `apellido` varchar(255) NOT NULL,
-  `usuario` varchar(255) NOT NULL,
-  `contraseña` varchar(255) NOT NULL,
-  `correo` varchar(255) NOT NULL,
-  `rol` varchar(255) NOT NULL,
-  `fecha_creacion` varchar(255) NOT NULL,
-  `ultimo_acceso` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `activo` tinyint(4) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `admin_user`
+--
+
+INSERT INTO `admin_user` (`id_admin`, `nombre`, `user_name`, `apellido`, `password`, `email`, `activo`, `updated_at`, `created_at`) VALUES
+(1, 'marcos', 'mbenegas', 'apellido', '12345', 'correo@correo.com', NULL, '2024-12-18 04:09:19', '2024-12-18 04:09:19');
 
 -- --------------------------------------------------------
 
@@ -79,7 +86,7 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`id_categoria`, `categoria`) VALUES
-(1, 'Mates'),
+(1, 'Mate'),
 (2, 'Mates de Acero');
 
 -- --------------------------------------------------------
@@ -138,7 +145,9 @@ CREATE TABLE `nombrelink` (
 --
 
 INSERT INTO `nombrelink` (`id_link`, `id_producto`, `nombreLink`) VALUES
-(1, 1, 'mate-acero-termico');
+(1, 1, 'mate-acero-termico'),
+(3, 3, 'mate-de-ceramica-artesanal'),
+(4, 4, 'mate-de-madera-tallada-con-bombilla-incluida');
 
 -- --------------------------------------------------------
 
@@ -201,7 +210,7 @@ CREATE TABLE `producto_categoria` (
 
 INSERT INTO `producto_categoria` (`id_categoria`, `id_producto`, `id_rel`) VALUES
 (1, 1, 1),
-(2, 1, 3);
+(2, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -223,7 +232,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('yhrrWYPdxruSjXFQiKbuWSpm4qq1bvWywbbaPUyI', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVkc5aGFkWmVBYWc5WWgyTkdlSlVKNjIxM2VKYmdrNElvT3RVeE1ISSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1733200926);
+('H584gLUUBNujXgk2U5BKBIhQq1ctIX3pGHGK0Dex', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiU1hBeUFYdlhjVEdqR0tiQ3NzZXVrTWlOcXRJYTFmWXM0OUZwSVJxayI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9hZG1pbmlzdHJhY2lvbi9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1734495185);
 
 -- --------------------------------------------------------
 
@@ -247,9 +256,9 @@ CREATE TABLE `users` (
 --
 
 --
--- Indices de la tabla `administradores`
+-- Indices de la tabla `admin_user`
 --
-ALTER TABLE `administradores`
+ALTER TABLE `admin_user`
   ADD PRIMARY KEY (`id_admin`);
 
 --
@@ -330,10 +339,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT de la tabla `administradores`
+-- AUTO_INCREMENT de la tabla `admin_user`
 --
-ALTER TABLE `administradores`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `admin_user`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `categorias`
@@ -357,7 +366,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `nombrelink`
 --
 ALTER TABLE `nombrelink`
-  MODIFY `id_link` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_link` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
