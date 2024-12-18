@@ -6,8 +6,18 @@
       @endif
 <form method="POST" action="/loginUser">
     @csrf
-    <input name="userName" placeholder="usuario" type="text">
+    <div>
+    <input name="user_name" placeholder="usuario" type="text">
+    @error("user_name")
+            <p>{{$message}}</p>
+        @enderror
+    </div>
+    <div>
     <input name="password" placeholder="password" type="password">
+    @error("password")
+            <p>{{$message}}</p>
+        @enderror
+    </div>
     <button>ingresar</button>
 </form>
 

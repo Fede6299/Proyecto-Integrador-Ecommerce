@@ -1,5 +1,14 @@
 @include('/layout/header')
-
+@if (session()->has("success"))
+        <div class="container">
+            <div class="alert alert-success text-center">{{ session("success") }}</div>
+        </div>
+      @endif
+      @if (session()->has("fail"))
+        <div class="container">
+            <div class="alert alert-danger text-center">{{ session("fail") }}</div>
+        </div>
+      @endif
 
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
