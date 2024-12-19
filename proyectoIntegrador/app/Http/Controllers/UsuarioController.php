@@ -18,7 +18,7 @@ class UsuarioController extends Controller
             "password.required"=>"Este campo es obligatorio" ,
         ]);
         if(Auth::attempt($datos)){
-            return response()->redirectTo("/")->with("success","Usuario logeado correctamente");
+            return response()->redirectTo("/administracion/dashboard")->with("success","Usuario logeado correctamente");
         }else{
             return response()->redirectTo("/")->with("fail","error no se pudo logear");
         }

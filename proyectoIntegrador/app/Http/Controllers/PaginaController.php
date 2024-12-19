@@ -45,6 +45,10 @@ class PaginaController extends Controller{
         return view("admin.registro");
     }
     public function adminProductos(){
-        return view("admin.adminProducto");
+        $productos = Producto::with("categorias")->get();
+        $parametros=[
+            "productos" => $productos
+        ];
+        return view("admin.adminProducto",$parametros);
     }
 }
