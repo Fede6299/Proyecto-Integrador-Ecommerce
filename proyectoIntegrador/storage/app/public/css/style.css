@@ -105,9 +105,13 @@
     display: flex;
     flex-direction: column; /* para cambiar de eje primordial*/
     align-items: center;    /*ese eje elegido que es el "y", va acompañado de esta directiva*/
+    margin: 30px;
 }
 .tituloContacto{
-    margin: 30px ;
+    text-align: center;
+    font-size: 30px;
+   
+    margin: 10px ;
     font-family: Arial; 
     color: #333;
 }
@@ -121,48 +125,53 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
-.contact-form-container  {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
+.formContacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    background-color:white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: center;
 }
 
 .form-group {
-    margin-bottom: 20px;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
-
-.form-group label {
-    display: block;
-    font-size: 14px;
+label {
     margin-bottom: 5px;
+    font-weight: bold;
 }
-
-.form-group input, .form-group textarea {
-    width: 100%;
+input, textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px;
 }
-
-.form-group textarea {
-    resize: vertical;
-}
-
 .botonEnviar {
+    grid-column: 1 / 2;
+    padding: 5px 10px;
     background-color: #FF6A13;
     color: white;
-    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    justify-self: start;
     font-size: 16px;
 }
-
 .botonEnviar:hover {
     background-color: #e05a0f;
 }
+/*-----------------------------------*/
+
+
 .liProduct{
 display: flex !important; 
 gap: 10px;
@@ -255,3 +264,148 @@ padding: 5px 5px;
     border: 2px solid #007BFF;
     opacity: 0.7;
 }
+
+
+/* arreglo con el estilo del producto*/
+
+.dropbtn {
+    background-color: black;
+    color: #000000;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-toggle-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem; /* Espacio entre el texto y la flecha */
+}
+
+.dropdown-toggle-custom::after {
+    margin-left: 0;
+}
+/*----------------------------------------------------*/
+
+
+/*VISTA DE FORMUARIO DE REGISTRO DE NUEVO*/
+.formulario-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    
+}
+.formulario {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color:white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+label {
+    margin-bottom: 5px;
+    font-weight:normal;
+}
+input{
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.botonRegistrar {
+    grid-column: 1 / 2;
+    padding: 5px 10px;
+    background-color: #FF6A13;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-self: start;
+    font-size: 16px;
+}
+.botonRegistrar:hover {
+    background-color: #e05a0f;
+}
+p {
+    color: red;
+    font-size: 12px;
+}
+
+.tituloRegistro {
+    text-align: center;
+    font-size: 30px;  
+    margin: 10px ;
+    font-family: Arial; 
+    color: #333;
+}
+
+
+/*---------------------------------*/
+
+/* VISTA DEL LOGIN*/
+.login-form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+   
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.login-input{
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.login-button{
+    
+    padding: 5px 10px;
+    background-color: #FF6A13;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-self: start;
+    font-size: 16px;
+}
+.login-button:hover{
+
+    background-color: #e05a0f;
+}
+.login-error{
+
+    color: red;
+    font-size: 12px;
+}
+.login-alert-success{
+    margin-bottom: 20px;
+}
+
+.tituloLogin{
+    text-align: center;
+    font-size: 30px;
+    margin: 10px ;
+    font-family: Arial; 
+    color: #333;
+}
+/*-----------------------------------*/
+  
+
