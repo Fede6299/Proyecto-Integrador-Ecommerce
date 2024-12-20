@@ -334,7 +334,7 @@ input{
 .botonRegistrar:hover {
     background-color: #e05a0f;
 }
-p {
+.formulario-container p {
     color: red;
     font-size: 12px;
 }
