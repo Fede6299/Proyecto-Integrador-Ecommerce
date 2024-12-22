@@ -32,11 +32,16 @@
     background-color: black;
 }
 
+.logoutButton{
+    background-color: black;
+    border:none;
+}
+
 
 /* Estilo base de los enlaces */
 
 
-.text-light a {
+.text-light a,button {
     text-decoration: none; /* Sin subrayado predeterminado */
     color: #fafaf8; /* Color claro para el texto (puedes ajustarlo según tu diseño) */
     position: relative; /* Necesario para el efecto */
@@ -45,7 +50,7 @@
 }
 
 /* Pseudo-elemento para el efecto */
-.text-light a::after {
+.text-light a::after, button::after {
     content: ''; /* Pseudo-elemento vacío */
     position: absolute; /* Posicionamiento relativo al enlace */
     left: 0;
@@ -57,11 +62,11 @@
 }
 
 /* Cambio de color y subrayado al hacer hover */
-.text-light a:hover {
+.text-light a:hover , button:hover{
     color: #c47249;/* Cambia el color del texto al pasar el mouse */
 }
 
-.text-light a:hover::after {
+.text-light a:hover::after , button:hover::after{
     width: 100%; /* Expande la línea subrayada al 100% */
 }
 

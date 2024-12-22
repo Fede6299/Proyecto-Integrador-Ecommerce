@@ -39,9 +39,10 @@
                     <a href="{{ url('/sobre-nosotros') }}">Sobre nosotros</a>
                     <a href="{{ url('/contacto') }}">Contacto</a>
                     @auth
+                    <a href="{{ url('/administracion/dashboard') }}">Administracion</a>
                     <form method="POST" action="/logout">
                         @csrf
-                        <button>Salir</button>
+                        <button class="logoutButton">Salir</button>
                     </form>    
                     @endauth
                     
