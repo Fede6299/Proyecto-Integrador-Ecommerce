@@ -11,6 +11,6 @@ class Categoria extends Model
     protected $primaryKey = "id_categoria";
     public $timestamps = false;
     public function productos():BelongsToMany{
-        return $this->belongsToMany(Producto::class,'producto_categoria','id_producto','id_categoria');
+        return $this->belongsToMany(Producto::class,'producto_categoria','id_categoria','id_producto');
     }
 }

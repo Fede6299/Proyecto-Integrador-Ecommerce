@@ -72,6 +72,7 @@ class UsuarioController extends Controller
             "nombre_Link" => Str::slug($datos["descripcion"]),
             "id_producto" => $producto->id_mate
         ]);
+        $producto->categorias()->attach(4);
 
 
         return response()->redirectTo("administracion/dashboard")->with("success","Producto creado correctamente");
