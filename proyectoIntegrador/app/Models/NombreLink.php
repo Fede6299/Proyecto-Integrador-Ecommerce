@@ -11,7 +11,7 @@ class NombreLink extends Model
     protected $primaryKey = "id_link";
 
     protected $fillable = [
-        'nombrelink',
+        'nombre_Link',
         'id_producto'
     
     ];

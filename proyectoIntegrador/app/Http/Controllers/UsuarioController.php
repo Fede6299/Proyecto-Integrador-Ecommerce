@@ -69,11 +69,11 @@ class UsuarioController extends Controller
         $producto = Producto::create($datos);
 
         NombreLink::create([
-            "nombreLink" => Str::slug($datos["descripcion"]),
+            "nombre_Link" => Str::slug($datos["descripcion"]),
             "id_producto" => $producto->id_mate
         ]);
 
 
-        // return response()->redirectTo("administracion/dashboard")->with("success","Producto creado correctamente");
+        return response()->redirectTo("administracion/dashboard")->with("success","Producto creado correctamente");
     }
 }

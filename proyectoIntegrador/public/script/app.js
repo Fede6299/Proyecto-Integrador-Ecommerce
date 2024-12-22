@@ -41,7 +41,7 @@ const filterList = async()=> {
         img.classList.add("imgSearch")
 
 
-        p.textContent = formatFromKebabCase(element.nombreLink)
+        p.textContent = formatFromKebabCase(element.nombre_Link)
         p.classList.add("width-search")
 
 
