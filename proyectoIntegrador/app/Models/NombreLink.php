@@ -17,6 +17,6 @@ class NombreLink extends Model
     ];
     public $timestamps = false;
     public function producto():BelongsTo{
-        return $this->belongsTo(Producto::class, 'id_link','id_mate' );
+        return $this->belongsTo(Producto::class, 'id_producto','id_mate' );
     }
 }
