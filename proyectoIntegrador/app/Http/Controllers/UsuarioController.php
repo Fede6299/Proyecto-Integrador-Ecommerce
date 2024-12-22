@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\NombreLink;
+use App\Models\Producto;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Str;
 class UsuarioController extends Controller
 {
     public function login(Request $request){
@@ -50,6 +52,28 @@ class UsuarioController extends Controller
     }
     public function logout(){
         Auth::logout();
+
         return response()->redirectTo("/");
+    }
+    public function crearProducto(Request $request){
+        $datos = $request->validate([
+            "descripcion" =>["required"],
+            "precio"=>["required"],
+            "cantidad"=> ["required"],
+        ],[
+            "descripcion.required" => "Este campo es obligatorio!",
+            "precio.required" => "Este campo es obligatorio!",
+            "cantidad.required" => "Este campo es obligatorio!",
+        ]);
+        $datos["estado"] = 1;
+        $producto = Producto::create($datos);
+
+        NombreLink::create([
+            "nombreLink" => Str::slug($datos["descripcion"]),
+            "id_producto" => $producto->id_mate
+        ]);
+
+
+        // return response()->redirectTo("administracion/dashboard")->with("success","Producto creado correctamente");
     }
 }

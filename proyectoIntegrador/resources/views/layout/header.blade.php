@@ -11,10 +11,14 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+        <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css" >
         
         <body class="font-sans antialiased dark:bg-black dark:text-white/50">
             <header class="bg-black navbar h-100 d-flex justify-content-around" >
+            <a href="{{ url('/') }}">
                 <h1 class="text-light navbar-brand mx-0 p-0">Tienda mates</h1>
+
+            </a>    
 
                 <!-- <ul class="nav nav-pills" >
                     <li class="nav-item"><a href="/" class="nav-link fw-semibold" style="color:#c47249; " >Inicio</a></li>

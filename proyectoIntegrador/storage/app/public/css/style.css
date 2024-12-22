@@ -69,7 +69,9 @@
 .text-light a:hover::after , button:hover::after{
     width: 100%; /* Expande la línea subrayada al 100% */
 }
-
+a{
+    text-decoration: none;
+}
 /* SOBRE NOSOTROS*/
 
 .tituloNosotros{
