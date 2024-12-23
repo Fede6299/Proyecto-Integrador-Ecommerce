@@ -31,7 +31,7 @@
                 <div class="text-light d-flex gap-4">           
                     <a href="{{ url('/') }}">Inicio</a>
                     <div class="dropdown">
-                    <a class="dropdown-toggle dropdown-toggle-custom" type="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+                    <a class=" dropdown-toggle-custom" type="button" data-bs-toggle="dropdown" aria-expanded="false">Productos <i class="las la-angle-down"></i></a>
                         <ul class="dropdown-menu px-3">
                             <li><a class="dropdown-item" href="{{ url('/productos/ver-todo') }}">Ver todo</a></li>
                             @foreach($categorias as $categoria)

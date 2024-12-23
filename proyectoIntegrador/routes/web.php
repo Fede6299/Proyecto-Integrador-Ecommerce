@@ -28,3 +28,4 @@ Route::post('/loginUser',[UsuarioController::class,'login']);
 Route::post('/logout',[UsuarioController::class,'logout']);
 Route::post('/crear',[UsuarioController::class,'crearProducto']);
 Route::put('/editar/{producto}', [UsuarioController::class, 'editarProducto']);
+Route::put("/producto/eliminar/{producto}", [UsuarioController::class, 'eliminarProducto']);

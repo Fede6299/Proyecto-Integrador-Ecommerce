@@ -65,6 +65,9 @@ class UsuarioController extends Controller
             "precio.required" => "Este campo es obligatorio!",
             "cantidad.required" => "Este campo es obligatorio!",
         ]);
+        
+        $datos["eliminado"] = 0;
+
         $datos["estado"] = 1;
         $producto = Producto::create($datos);
 
@@ -94,5 +97,10 @@ class UsuarioController extends Controller
         $producto->cantidad = $datos["cantidad"];
         $producto->save();
         return redirect("/administracion/dashboard")->with("success", "Se actualizo el producto de forma correcta");
+    }
+    public function eliminarProducto(Producto $producto, Request $request){
+        $producto->eliminado = 1;
+        $producto->save();
+        return redirect("/administracion/dashboard")->with("success", "Se elimino el producto de forma correcta");
     }
 }

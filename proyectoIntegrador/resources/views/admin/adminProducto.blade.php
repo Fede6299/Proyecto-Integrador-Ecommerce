@@ -27,6 +27,7 @@
     </thead>
       <tbody class="table-group-divider">
           @foreach($productos as $producto)
+          @if($producto->eliminado != 1)
               <tr>
                 <!-- <td>{{$producto}}</td> -->
                   <th>{{ $producto->id_mate }}</th>
@@ -60,13 +61,14 @@
                   <th>{{ $producto->imgUrl }}</th>
                   <th>
                       <a href="/producto/{{ $producto->id_mate }}/editar-producto"><i class="fa fa-edit"></i></a>
-                      <form action="/producto/{{ $producto->id_producto }}" method="post">
+                      <form action="/producto/eliminar/{{ $producto->id_mate }}" method="post">
                           @csrf
-                          @method("DELETE")
+                          @method("PUT")
                           <button><i class="fa fa-trash"></i></button>
                       </form>
                   </th>
               </tr>
+              @endif
           @endforeach
       </tbody>
   </table>

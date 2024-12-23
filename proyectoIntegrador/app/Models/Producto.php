@@ -16,13 +16,14 @@ class Producto extends Model
         'descripcion',
         'precio',
         'cantidad',
-        'estado'
+        'estado',
+        'eliminado'
     
     ];
     public function categorias():BelongsToMany{
         return $this->belongsToMany(Categoria::class,'producto_categoria','id_producto','id_categoria' );
     }
     public function nombreLink():HasOne{
-        return $this->hasOne(NombreLink::class,'id_mate' ,'id_producto');
+        return $this->hasOne(NombreLink::class ,'id_producto','id_mate');
     }
 }
