@@ -21,7 +21,10 @@ Route::get('/administracion/login', [PaginaController::class, 'loginAdm']);
 Route::get('/administracion/registrar-usuario',[PaginaController::class,'registrar']);
 Route::get('/administracion/dashboard',[PaginaController::class,'adminProductos'])->middleware("auth");
 Route::get('/administracion/dashboard/crear-producto',[PaginaController::class,'crearProducto']);
+Route::get('/producto/{producto}/editar-producto',[PaginaController::class,'editarProducto']);
+
 Route::post('/registrar',[UsuarioController::class,'registrar']);
 Route::post('/loginUser',[UsuarioController::class,'login']);
 Route::post('/logout',[UsuarioController::class,'logout']);
 Route::post('/crear',[UsuarioController::class,'crearProducto']);
+Route::put('/editar/{producto}', [UsuarioController::class, 'editarProducto']);

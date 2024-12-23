@@ -54,4 +54,12 @@ class PaginaController extends Controller{
     public function crearProducto(){
         return view("admin.crearProducto");
     }
+    public function editarProducto(Producto $producto){
+        $parametros=[
+
+            "producto" => $producto
+        ];
+
+        return view("admin.editarProducto",$parametros);
+    }
 }

@@ -47,7 +47,7 @@
                             </th>
                             <th>{{ $producto->imgUrl }}</th>
                             <th>
-                                <a href="/producto/{{ $producto->id_mate }}/edit"><i class="fa fa-edit"></i></a>
+                                <a href="/producto/{{ $producto->id_mate }}/editar-producto"><i class="fa fa-edit"></i></a>
                                 <form action="/producto/{{ $producto->id_producto }}" method="post">
                                     @csrf
                                     @method("DELETE")

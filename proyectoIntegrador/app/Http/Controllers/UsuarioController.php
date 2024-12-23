@@ -77,4 +77,20 @@ class UsuarioController extends Controller
 
         return response()->redirectTo("administracion/dashboard")->with("success","Producto creado correctamente");
     }
+    public function editarProducto(Producto $producto, Request $request){
+        $datos = $request->validate([
+            "descripcion" =>["required"],
+            "precio"=>["required"],
+            "cantidad"=> ["required"],
+        ],[
+            "descripcion.required" => "Este campo es obligatorio!",
+            "precio.required" => "Este campo es obligatorio!",
+            "cantidad.required" => "Este campo es obligatorio!",
+        ]);
+        $producto->descripcion = $datos["descripcion"];
+        $producto->precio = $datos["precio"];
+        $producto->cantidad = $datos["cantidad"];
+        $producto->save();
+        return redirect("/administracion/dashboard")->with("success", "Se actualizo el producto de forma correcta");
+    }
 }
