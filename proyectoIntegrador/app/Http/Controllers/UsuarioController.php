@@ -60,19 +60,26 @@ class UsuarioController extends Controller
             "descripcion" =>["required"],
             "precio"=>["required"],
             "cantidad"=> ["required"],
+            
         ],[
             "descripcion.required" => "Este campo es obligatorio!",
             "precio.required" => "Este campo es obligatorio!",
             "cantidad.required" => "Este campo es obligatorio!",
         ]);
-        
+    
+        $file = $request->file("imagenPrincipal");
+        $nombre = time()."_".$file->getClientOriginalName();
+        $fileParth = $file->storeAs("public/img", $nombre);
+        $datos["imgUrl"] = $fileParth;
         $datos["eliminado"] = 0;
+        
+    
 
         $datos["estado"] = 1;
         $producto = Producto::create($datos);
 
         NombreLink::create([
-            "nombre_Link" => Str::slug($datos["descripcion"]),
+             "nombre_Link" => Str::slug($datos["descripcion"]),
             "id_producto" => $producto->id_mate
         ]);
         $producto->categorias()->attach(4);

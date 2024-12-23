@@ -58,7 +58,8 @@
                     ?>
 
                   </th>
-                  <th>{{ $producto->imgUrl }}</th>
+                  <th>
+                    <img src="{{asset('storage/'.$producto->imgUrl)}}" alt="imagen" style="width: 50px;">
                   <th>
                       <a href="/producto/{{ $producto->id_mate }}/editar-producto"><i class="fa fa-edit"></i></a>
                       <form action="/producto/eliminar/{{ $producto->id_mate }}" method="post">

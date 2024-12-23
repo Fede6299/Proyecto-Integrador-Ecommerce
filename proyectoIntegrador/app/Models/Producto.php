@@ -17,7 +17,8 @@ class Producto extends Model
         'precio',
         'cantidad',
         'estado',
-        'eliminado'
+        'eliminado',
+        'imgUrl'
     
     ];
     public function categorias():BelongsToMany{
