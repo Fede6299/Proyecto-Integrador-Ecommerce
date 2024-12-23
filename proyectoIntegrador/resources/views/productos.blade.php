@@ -4,6 +4,9 @@
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
 @foreach($productos as $producto)
+@if ($producto->estado != 0)
+  
+
 <div class="col-md-3">
   <div class="card" >
     <a href="/productos/producto/<?php echo $producto->nombreLink->nombreLink ?? $producto->id_mate ?>">
@@ -25,7 +28,7 @@
       <a type="button" class="btn btn-warning btn-naranja px-5" href="/productos/producto/<?php echo $producto->nombreLink->nombreLink ?? $producto->id_mate ?>">Ver más</a>
     </div>
   </div>
-</div>
+</div>@endif
 @endforeach
 </div>
 

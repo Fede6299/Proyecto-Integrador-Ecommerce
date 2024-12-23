@@ -82,12 +82,14 @@ class UsuarioController extends Controller
             "descripcion" =>["required"],
             "precio"=>["required"],
             "cantidad"=> ["required"],
+           "estado" => ["required"]
         ],[
             "descripcion.required" => "Este campo es obligatorio!",
             "precio.required" => "Este campo es obligatorio!",
             "cantidad.required" => "Este campo es obligatorio!",
         ]);
         $producto->descripcion = $datos["descripcion"];
+        $producto->estado = $datos["estado"];
         $producto->precio = $datos["precio"];
         $producto->cantidad = $datos["cantidad"];
         $producto->save();

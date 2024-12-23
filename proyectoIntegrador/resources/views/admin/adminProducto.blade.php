@@ -18,6 +18,7 @@
       <th>Id</th>
       <th>Descripcion</th>
       <th>Cantidad</th>
+      <th>Estado</th>
       <th>Precio</th>
       <th>Categoria</th>
       <th>Imagen</th>
@@ -31,6 +32,17 @@
                             <th>{{ $producto->id_mate }}</th>
                             <th>{{ $producto->descripcion }}</th>
                             <th>{{ $producto->cantidad }}</th>
+                            <th>
+                              <?php 
+                              if($producto->estado != 0){
+                                echo "Activo";
+                              }
+                              else{
+                                echo "Inactivo";
+                              }
+                              ?> 
+                            
+                            </th>
                             <th>{{ $producto->precio }}</th>
                             <th>
                               <?php  
