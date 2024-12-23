@@ -16,4 +16,9 @@ return Application::configure(basePath: dirname(__DIR__))
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
-    })->create();
+    })
+    ->withProviders([
+        // Otros proveedores de servicios
+        App\Providers\ViewServiceProvider::class,
+    ])
+    ->create();

@@ -34,10 +34,10 @@
                     <a class="dropdown-toggle dropdown-toggle-custom" type="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
                         <ul class="dropdown-menu px-3">
                             <li><a class="dropdown-item" href="{{ url('/productos/ver-todo') }}">Ver todo</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/productos/1') }}">Mates</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/productos/2') }}">Termos</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/productos/3') }}">Bombillas</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/productos/4') }}">Accesorios</a></li>
+                            @foreach($categorias as $categoria){
+                               echo <li><a class="dropdown-item" href="{{url('/productos/'.$categoria->categoria )}} ">{{$categoria->categoria}}</a></li>
+                            }
+                           @endforeach
                         </ul>
                     </div>
                     <a href="{{ url('/sobre-nosotros') }}">Sobre nosotros</a>
