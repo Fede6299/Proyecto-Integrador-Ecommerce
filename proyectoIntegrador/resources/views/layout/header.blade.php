@@ -34,9 +34,9 @@
                     <a class="dropdown-toggle dropdown-toggle-custom" type="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
                         <ul class="dropdown-menu px-3">
                             <li><a class="dropdown-item" href="{{ url('/productos/ver-todo') }}">Ver todo</a></li>
-                            @foreach($categorias as $categoria){
-                               echo <li><a class="dropdown-item" href="{{url('/productos/'.$categoria->categoria )}} ">{{$categoria->categoria}}</a></li>
-                            }
+                            @foreach($categorias as $categoria)
+                             <li><a class="dropdown-item" href="{{url('/productos/'.$categoria->categoria )}} ">{{$categoria->categoria}}</a></li>
+                            
                            @endforeach
                         </ul>
                     </div>
