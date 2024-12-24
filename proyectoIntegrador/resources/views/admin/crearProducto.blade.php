@@ -22,12 +22,26 @@
     </div>
 
 
+    <!-- <select style="width:300px" name="field2" id="field2" placeholder="search" multiple multiselect-search="true"  multiselect-max-items="3" onchange="console.log(this.selectedOptions)"> -->
 
     <p>Categorias</p>
+    <select name="categorias[]" placeholder="search" multiselect-search="true"  multiple style="width:300px">
+
+  <option value="0">Angular</option>
+  <option value="1">Bootstrap</option>
+  <option value="2">React.js</option>
+  <option value="3">Vue.js</option>
+</select>
+
 
     <button class="btn btn-dark">Crear</button>
 </form>
+
+
+
 <script>
+    new MultiSelectTag('countries');
+
     function displaySelectedImage(event, elementId) {
     const selectedImage = document.getElementById(elementId);
     const fileInput = event.target;

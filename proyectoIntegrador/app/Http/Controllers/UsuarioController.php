@@ -66,14 +66,14 @@ class UsuarioController extends Controller
             "precio.required" => "Este campo es obligatorio!",
             "cantidad.required" => "Este campo es obligatorio!",
         ]);
-    
+        // var_dump($request->input('categorias')); 
+
         $file = $request->file("imagenPrincipal");
         $nombre = time()."_".$file->getClientOriginalName();
-        $fileParth = $file->storeAs("public/img", $nombre);
+        $fileParth = $file->storeAs("img", $nombre,'public');
         $datos["imgUrl"] = $fileParth;
         $datos["eliminado"] = 0;
         
-    
 
         $datos["estado"] = 1;
         $producto = Producto::create($datos);
