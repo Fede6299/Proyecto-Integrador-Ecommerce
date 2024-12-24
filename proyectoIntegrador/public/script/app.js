@@ -37,9 +37,9 @@ const filterList = async()=> {
         let li = document.createElement("li")
         let p = document.createElement("p")
         let img= document.createElement("img")
-        img.src= `${URL}/storage/img/producto/mate.webp`
-        img.classList.add("imgSearch")
+        img.src= `${URL}/storage/${element.producto.imgUrl}`
 
+        img.classList.add("imgSearch")
 
         p.textContent = formatFromKebabCase(element.nombre_Link)
         p.classList.add("width-search")

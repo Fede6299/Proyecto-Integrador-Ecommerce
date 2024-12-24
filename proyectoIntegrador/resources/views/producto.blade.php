@@ -10,7 +10,9 @@
 	    </div>
 
         <div class="p-1 producto">
-            <img src="{{ asset('storage/img/producto/mate.webp') }}" id="imgGrande" class="imgGrande" alt="..." width="420px">
+        <img src="{{asset('storage/'.$producto->imgUrl)}}" id="imgGrande" class="imgGrande" alt="..." width="420px">
+
+            <!-- <img src="{{ asset('storage/img/producto/mate.webp') }}" id="imgGrande" class="imgGrande" alt="..." width="420px"> -->
 	    </div>
 
 	    <div class="p-2 producto card">

@@ -11,7 +11,9 @@
 <?php echo $producto->nombre_Link ?>
   <div class="card" >
     <a href="/productos/producto/<?php echo $producto->nombreLink->nombre_Link ?? "" ?>">
-      <img src="{{ asset('storage/img/producto/mate.webp') }}" class="card-img-top" alt="...">
+    <img src="{{asset('storage/'.$producto->imgUrl)}}" class="card-img-top" alt="...">
+
+    <!-- <img src="{{ asset('storage/img/producto/mate.webp') }}" class="card-img-top" alt="..."> -->
     </a>
     <div class="card-body">
       <p class="card-text categoria mb-1">
