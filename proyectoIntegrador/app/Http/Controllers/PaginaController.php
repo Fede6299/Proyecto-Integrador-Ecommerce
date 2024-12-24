@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use App\Models\Destacados;
 use App\Models\NombreLink;
 use App\Models\Producto;
@@ -52,11 +53,18 @@ class PaginaController extends Controller{
         return view("admin.adminProducto",$parametros);
     }
     public function crearProducto(){
-        return view("admin.crearProducto");
-    }
-    public function editarProducto(Producto $producto){
+        $categorias = Categoria::all();
         $parametros=[
 
+            "categoria" => $categorias
+        ];
+        return view("admin.crearProducto",  $parametros);
+    }
+    public function editarProducto(Producto $producto){
+        $categorias = Categoria::all();
+
+        $parametros=[
+            "categoria" => $categorias,
             "producto" => $producto
         ];
 

@@ -20,3 +20,6 @@ thumbnails.forEach(thumb => {
     bigImage.src = thumb.src;
   });
 });
+
+
+  

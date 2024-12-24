@@ -60,20 +60,17 @@ class UsuarioController extends Controller
             "descripcion" =>["required"],
             "precio"=>["required"],
             "cantidad"=> ["required"],
-            
+            "categorias" => ["nullable","array"],
         ],[
             "descripcion.required" => "Este campo es obligatorio!",
             "precio.required" => "Este campo es obligatorio!",
             "cantidad.required" => "Este campo es obligatorio!",
         ]);
-        // var_dump($request->input('categorias')); 
-
         $file = $request->file("imagenPrincipal");
         $nombre = time()."_".$file->getClientOriginalName();
         $fileParth = $file->storeAs("img", $nombre,'public');
         $datos["imgUrl"] = $fileParth;
         $datos["eliminado"] = 0;
-        
 
         $datos["estado"] = 1;
         $producto = Producto::create($datos);
@@ -82,7 +79,7 @@ class UsuarioController extends Controller
              "nombre_Link" => Str::slug($datos["descripcion"]),
             "id_producto" => $producto->id_mate
         ]);
-        $producto->categorias()->attach(4);
+        $producto->categorias()->attach($datos["categorias"]);
 
 
         return response()->redirectTo("administracion/dashboard")->with("success","Producto creado correctamente");

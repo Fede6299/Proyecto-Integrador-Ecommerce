@@ -26,12 +26,11 @@
 
     <p>Categorias</p>
     <select name="categorias[]" placeholder="search" multiselect-search="true"  multiple style="width:300px">
+        @foreach($categorias as $categoria)
+            <option value="{{$categoria->id_categoria}}">{{$categoria->categoria}}</option>
+        @endforeach
 
-  <option value="0">Angular</option>
-  <option value="1">Bootstrap</option>
-  <option value="2">React.js</option>
-  <option value="3">Vue.js</option>
-</select>
+    </select>
 
 
     <button class="btn btn-dark">Crear</button>
@@ -40,22 +39,6 @@
 
 
 <script>
-    new MultiSelectTag('countries');
-
-    function displaySelectedImage(event, elementId) {
-    const selectedImage = document.getElementById(elementId);
-    const fileInput = event.target;
-
-    if (fileInput.files && fileInput.files[0]) {
-        const reader = new FileReader();
-
-        reader.onload = function(e) {
-            selectedImage.src = e.target.result;
-        };
-
-        reader.readAsDataURL(fileInput.files[0]);
-    }
-}
 </script>
 @include('/layout/footer')
 
