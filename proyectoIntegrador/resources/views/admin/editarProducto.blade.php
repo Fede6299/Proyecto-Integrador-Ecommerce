@@ -1,7 +1,7 @@
 @include('/layout/header')
 <h2>Editar</h2>
 <p>{{$producto->descripcion}}</p>
-<form action="/editar/{{$producto->id_mate}}" method="post" class="w-25">
+<form action="/editar/{{$producto->id_mate}}" method="post" class="w-25" enctype="multipart/form-data">
     @csrf
     @method("PUT")
     <input name="descripcion" value="{{old('descripcion', $producto->descripcion)}}" placeholder="descripcion">
@@ -15,8 +15,13 @@
         <p>Imagen Principal </p>
 
         <div class="mb-4 d-flex justify-content-center">
+            @if ($producto->imgUrl != "")
+                <img id="selectedImage" src="{{ asset('storage/'.$producto->imgUrl)}}" alt="example placeholder" style="width: 300px;" />
+
+            @else
             <img id="selectedImage" src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg"
             alt="example placeholder" style="width: 300px;" />
+            @endif
         </div>
         <div class="d-flex justify-content-center">
             <div data-mdb-ripple-init class="btn btn-primary btn-rounded">

@@ -66,10 +66,14 @@ class UsuarioController extends Controller
             "precio.required" => "Este campo es obligatorio!",
             "cantidad.required" => "Este campo es obligatorio!",
         ]);
+
+
         $file = $request->file("imagenPrincipal");
         $nombre = time()."_".$file->getClientOriginalName();
         $fileParth = $file->storeAs("img", $nombre,'public');
         $datos["imgUrl"] = $fileParth;
+
+
         $datos["eliminado"] = 0;
 
         $datos["estado"] = 1;
@@ -100,12 +104,21 @@ class UsuarioController extends Controller
         $producto->estado = $datos["estado"];
         $producto->precio = $datos["precio"];
         $producto->cantidad = $datos["cantidad"];
-        
         $producto->categorias()->sync($datos["categorias"] ?? []);
         
         
 
+        $file = $request->file("imagenPrincipal");
+        if($file){
+            unlink("storage/".$producto->imgUrl);
+            $nombre = time()."_".$file->getClientOriginalName();
+            $fileParth = $file->storeAs("img", $nombre,'public');
 
+
+            $producto->imgUrl= $fileParth;
+
+        }
+        
         $producto->save();
         return redirect("/administracion/dashboard")->with("success", "Se actualizo el producto de forma correcta");
     }
