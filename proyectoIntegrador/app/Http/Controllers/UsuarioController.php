@@ -110,7 +110,10 @@ class UsuarioController extends Controller
 
         $file = $request->file("imagenPrincipal");
         if($file){
-            unlink("storage/".$producto->imgUrl);
+            if($producto->imgUrl){
+                unlink("storage/".$producto->imgUrl);
+
+            }
             $nombre = time()."_".$file->getClientOriginalName();
             $fileParth = $file->storeAs("img", $nombre,'public');
 
