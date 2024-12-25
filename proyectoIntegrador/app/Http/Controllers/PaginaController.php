@@ -65,6 +65,7 @@ class PaginaController extends Controller{
 
         $parametros=[
             "categoria" => $categorias,
+            "categorySelected" =>$producto->categorias->pluck("id_categoria")->toArray(),
             "producto" => $producto
         ];
 

@@ -79,7 +79,7 @@ class UsuarioController extends Controller
              "nombre_Link" => Str::slug($datos["descripcion"]),
             "id_producto" => $producto->id_mate
         ]);
-        $producto->categorias()->attach($datos["categorias"]);
+        $producto->categorias()->attach($datos["categorias"]?? []);
 
 
         return response()->redirectTo("administracion/dashboard")->with("success","Producto creado correctamente");
@@ -89,7 +89,8 @@ class UsuarioController extends Controller
             "descripcion" =>["required"],
             "precio"=>["required"],
             "cantidad"=> ["required"],
-           "estado" => ["required"]
+           "estado" => ["required"],
+           "categorias" => ["nullable","array"],
         ],[
             "descripcion.required" => "Este campo es obligatorio!",
             "precio.required" => "Este campo es obligatorio!",
@@ -99,6 +100,12 @@ class UsuarioController extends Controller
         $producto->estado = $datos["estado"];
         $producto->precio = $datos["precio"];
         $producto->cantidad = $datos["cantidad"];
+        
+        $producto->categorias()->sync($datos["categorias"] ?? []);
+        
+        
+
+
         $producto->save();
         return redirect("/administracion/dashboard")->with("success", "Se actualizo el producto de forma correcta");
     }

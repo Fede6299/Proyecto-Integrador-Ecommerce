@@ -45,12 +45,19 @@
                   
                   </th>
                   <th>{{ $producto->precio }}</th>
-                  <th>
+                  <!-- corregir los estilos inline -->
+                  <th style="max-width: 200px;"> 
                     <?php  
                     if($producto->categorias->isNotEmpty()){
                       foreach($producto->categorias as $categoria){
-                        echo ($categoria->categoria);
-                        echo ",";}
+                        if(count($producto->categorias) > 1){
+                          echo ($categoria->categoria);
+                          echo ", ";
+                        }else{
+                          echo ($categoria->categoria);
+
+                        }
+                      }
 
                     } else {
                       echo "sin categoría";
