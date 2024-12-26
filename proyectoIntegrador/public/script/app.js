@@ -129,7 +129,7 @@ const buscarProductoAdmin = (e) =>{
 
     const form = e.target;
     if(query){
-        form.action = `${URL}/administracion/dashboard/${query}`;
+        form.action = `${URL}/administracion/dashboard/buscar/${query}`;
     }else if(query === ''){
         form.action = `${URL}/administracion/dashboard`;
     }

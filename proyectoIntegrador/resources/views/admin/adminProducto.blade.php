@@ -8,7 +8,7 @@
 
 </section>
 <section style="max-width: 400px;">
-  <form  onsubmit="buscarProductoAdmin(event)">
+  <form class="d-flex" onsubmit="buscarProductoAdmin(event)">
   <input 
       type="text" 
       class="form-control" 
