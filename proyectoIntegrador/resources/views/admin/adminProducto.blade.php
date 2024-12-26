@@ -7,6 +7,8 @@
   <a href="{{ url('/administracion/dashboard/crear-producto') }}" class="btn btn-dark">+ Nuevo producto</a>
 
 </section>
+
+<?php var_dump($productoDestacados)?>
 @if (session()->has("success"))
         <div class="container">
             <div class="alert alert-success text-center">{{ session("success") }}</div>
@@ -15,6 +17,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th scope="col"> Destacado</th>
       <th scope="col">Id</th>
       <th scope="col">Descripcion</th>
       <th scope="col">Cantidad</th>
@@ -29,7 +32,20 @@
           @foreach($productos as $producto)
           @if($producto->eliminado != 1)
               <tr>
-                <!-- <td>{{$producto}}</td> -->
+                  <th>  
+                     
+                    <input
+                     type="checkbox"
+                      class="custom-control-check"
+                       data-id="{{$producto->id_mate}}" 
+                       <?php 
+                        if(in_array($producto->id_mate, $productoDestacados)){
+                            echo "checked";
+                        }
+                        else { echo "";}
+                ?>
+                       >
+                  </th>
                   <th>{{ $producto->id_mate }}</th>
                   <th>{{ $producto->descripcion }}</th>
                   <th>{{ $producto->cantidad }}</th>
@@ -44,7 +60,7 @@
                     ?> 
                   
                   </th>
-                  <th>{{ $producto->precio }}</th>
+                  <th>${{ $producto->precio }}</th>
                   <!-- corregir los estilos inline -->
                   <th style="max-width: 200px;"> 
                     <?php  

@@ -47,8 +47,12 @@ class PaginaController extends Controller{
     }
     public function adminProductos(){
         $productos = Producto::with("categorias")->get();
+        $destacados = Destacados::all()->pluck("id_prodDest")->toArray();
+
         $parametros=[
-            "productos" => $productos
+            "productos" => $productos,
+            "productoDestacados" => $destacados
+
         ];
         return view("admin.adminProducto",$parametros);
     }

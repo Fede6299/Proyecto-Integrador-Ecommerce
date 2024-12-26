@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BuscadorController;
+use App\Http\Controllers\CheckController;
 use App\Http\Controllers\PaginaController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UsuarioController;
@@ -29,3 +30,7 @@ Route::post('/logout',[UsuarioController::class,'logout']);
 Route::post('/crear',[UsuarioController::class,'crearProducto']);
 Route::put('/editar/{producto}', [UsuarioController::class, 'editarProducto']);
 Route::put("/producto/eliminar/{producto}", [UsuarioController::class, 'eliminarProducto']);
+Route::post('/check-dest',[CheckController::class,'check']);
+Route::post('/check-dest-delete',[CheckController::class,'checkdelete']);
+
+

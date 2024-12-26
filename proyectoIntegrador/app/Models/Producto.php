@@ -27,4 +27,7 @@ class Producto extends Model
     public function nombreLink():HasOne{
         return $this->hasOne(NombreLink::class ,'id_producto','id_mate');
     }
+    public function destacados():HasOne{
+        return $this->hasOne(Destacados::class,'id_mate','id_prodDest');
+    }
 }

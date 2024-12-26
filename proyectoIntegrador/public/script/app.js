@@ -90,3 +90,30 @@ function displaySelectedImage(event, elementId) {
         reader.readAsDataURL(fileInput.files[0]);
     }
     }
+
+document.querySelectorAll('.custom-control-check').forEach(check => {
+    check.addEventListener('change',()=>{
+        const id = check.getAttribute('data-id')
+        if(check.checked){
+            fetch("/check-dest",{
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json',
+                    'X-CSRF-TOKEN':document.querySelector('meta[name="csrf-token"]').content
+                },
+                body:JSON.stringify({id:id})
+            }).then(res => res.json()).then(data => console.log(data))
+            console.log(id)
+        }else{
+            console.log('desmarcado')
+            fetch("/check-dest-delete",{
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json',
+                    'X-CSRF-TOKEN':document.querySelector('meta[name="csrf-token"]').content
+                },
+                body:JSON.stringify({id:id})
+            }).then(res => res.json()).then(data => console.log(data))
+        }      
+    })
+})
