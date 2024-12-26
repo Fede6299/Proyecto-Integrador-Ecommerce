@@ -3,9 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Producto extends Model
 {
@@ -29,5 +29,8 @@ class Producto extends Model
     }
     public function destacados():HasOne{
         return $this->hasOne(Destacados::class,'id_mate','id_prodDest');
+    }
+    public function imagenes():HasMany{
+        return $this->hasMany(Galeria::class,'id_mate','id_imagen', 'imgUrl2');
     }
 }

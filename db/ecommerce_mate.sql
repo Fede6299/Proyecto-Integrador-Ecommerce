@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-12-2024 a las 19:39:38 manual
+-- Tiempo de generación: 26-12-2024 a las 21:04:43 manual
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -123,6 +123,52 @@ INSERT INTO `destacados` (`id_destacados`, `id_prodDest`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `galeria`
+--
+
+CREATE TABLE `galeria` (
+  `id_imagen` int NOT NULL,
+  `id_mate` int NOT NULL,
+  `imgUrl2` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Volcado de datos para la tabla `galeria`
+--
+
+INSERT INTO `galeria` (`id_imagen`, `id_mate`, `imgUrl2`) VALUES
+(1, 28, 'mate-criollo-marfil.webp'),
+(2, 28, 'mate-de-ceramica-c-bombilla.webp'),
+(3, 28, 'mate-de-ceramica-tipo-piedra.webp'),
+(4, 28, 'mate-quechua.webp'),
+(5, 40, 'Set-Matero-bolso-dama-turqueza.webp'),
+(6, 40, 'Set-Matero-Brianjaz-Marron.webp'),
+(7, 41, 'Mate-de-vidrio-en-aguayo.webp'),
+(8, 41, 'Mates-de-vidrio-copita-forrado.webp'),
+(9, 41, 'Mates-de-vidrio-forrado-en-vaqueta.webp'),
+(10, 42, 'mate-imperial-acero-cuero-con-base.webp'),
+(11, 42, 'mate-imperial-de-acero-negro.webp'),
+(12, 42, 'mate-imperial-de-algarrobo-acero.webp'),
+(13, 42, 'mate-mola-acero-304.webp'),
+(14, 43, 'mate-de-acero-vaso-termico-negro.webp'),
+(15, 44, 'mate-madera-algarrobo-huevito-y-alpaca.webp'),
+(16, 44, 'mate-madera-algarrobo-pintado-en-caja.webp'),
+(17, 44, 'mate-madera-con-base-de-cuero-y-bombilla.webp'),
+(18, 44, 'mates-de-madera-algarrobo-con-aplique.webp'),
+(19, 45, 'set-matero-clasico-eco-cuero-marfil.webp'),
+(20, 45, 'set-matero-clasico-simil-carpincho.webp'),
+(21, 46, 'bombilla-alpaca-con-bano-de-plata.webp'),
+(22, 46, 'bombilla-alpaca-galloneada-y-soaje.webp'),
+(23, 47, '1.jpg'),
+(24, 47, '2.jpg'),
+(25, 47, '3.jpg'),
+(26, 47, '4.jpg'),
+(27, 47, '6.jpg'),
+(28, 47, '7.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `migrations`
 --
 
@@ -163,7 +209,15 @@ INSERT INTO `nombrelink` (`id_link`, `id_producto`, `nombre_Link`) VALUES
 (6, 28, 'mate-de-ceramico'),
 (7, 29, 'mate-urbano'),
 (16, 38, 'set-de-latas'),
-(17, 39, 'set-de-latas-con-mate');
+(17, 39, 'set-de-latas-con-mate'),
+(18, 40, 'set-matero-premium'),
+(19, 41, 'mates-de-vidrio'),
+(20, 42, 'mates-de-acero'),
+(21, 43, 'vaso-termico-mate-de-acero'),
+(22, 44, 'mates-de-madera'),
+(23, 45, 'set-matero-clasico'),
+(24, 46, 'bombillas-acero-y-alpaca'),
+(25, 47, 'mates-ia');
 
 -- --------------------------------------------------------
 
@@ -209,10 +263,18 @@ INSERT INTO `productos` (`id_mate`, `cantidad`, `descripcion`, `estado`, `elimin
 (7, 40, 'Mate de acero inoxidable con doble capa térmica', 0, 1, 800, '2024-12-01 00:00:00', '2024-12-23 23:08:36', 'https://ecommerce.com/img/mate-acero.jpg'),
 (8, 3, 'Mate de acero', 1, 1, 20000, '2024-12-22 20:28:01', '2024-12-23 15:25:10', NULL),
 (27, 20, 'Mate de algarrobo', 1, 1, 10000, '2024-12-22 21:16:38', '2024-12-23 15:25:55', NULL),
-(28, 3, 'mate de ceramico', 1, 0, 10000, '2024-12-22 21:52:20', '2024-12-22 21:52:20', 'img/mates/8.jpg'),
+(28, 3, 'mate de ceramico', 1, 0, 10000, '2024-12-22 21:52:20', '2024-12-22 21:52:20', 'img/producto/47/8.jpg'),
 (29, 20, 'mate urbano', 1, 1, 10000, '2024-12-22 21:56:16', '2024-12-22 21:56:16', NULL),
 (38, 3, 'set de latas', 1, 0, 10000, '2024-12-24 00:42:36', '2024-12-24 01:14:23', 'img/1735000956_5-5-600x600.webp'),
-(39, 3, 'set de latas con mate', 1, 0, 10000, '2024-12-24 17:06:05', '2024-12-25 22:08:56', 'img/1735164536_4012.webp');
+(39, 3, 'set de latas con mate', 1, 0, 10000, '2024-12-24 17:06:05', '2024-12-25 22:08:56', 'img/1735164536_4012.webp'),
+(40, 30, 'Set Matero Premium', 1, 0, 150000, '2024-12-26 19:45:00', '2024-12-26 19:45:00', 'img/producto/40/matero-Premium-Marfil.webp'),
+(41, 60, 'Mates de vidrio', 1, 0, 30000, '2024-12-26 19:48:11', '2024-12-26 19:48:11', 'img/producto/41/Mate-de-vidrio-Argentina.webp'),
+(42, 55, 'Mates de acero', 1, 0, 20000, '2024-12-26 19:49:14', '2024-12-26 19:49:14', 'img/producto/42/mate-pary-acero-304-con-bombilla.webp'),
+(43, 160, 'Vaso térmico, mate de acero', 1, 0, 15000, '2024-12-26 19:50:29', '2024-12-26 19:50:29', 'img/producto/43/mate-de-acero-vaso-termico-blanco.webp'),
+(44, 200, 'Mates de madera', 1, 0, 25000, '2024-12-26 19:51:36', '2024-12-26 19:51:36', 'img/producto/44/mate-madera-hexagonal-copia.webp'),
+(45, 400, 'Set matero clásico', 1, 0, 100000, '2024-12-26 19:52:46', '2024-12-26 19:52:46', 'img/producto/45/set-matero-canasta-eco-cuero-marron.webp'),
+(46, 500, 'Bombillas acero y alpaca', 1, 0, 10000, '2024-12-26 19:53:42', '2024-12-26 19:53:42', 'img/producto/46/bombilla-acero-pico-loro-doble-cano.webp'),
+(47, 99999, 'Mates IA', 1, 0, 2, '2024-12-26 20:01:42', '2024-12-26 20:01:42', 'img/producto/47/5.jpg');
 
 -- --------------------------------------------------------
 
@@ -242,7 +304,28 @@ INSERT INTO `producto_categoria` (`id_categoria`, `id_producto`, `id_rel`) VALUE
 (3, 39, 36),
 (5, 39, 37),
 (9, 39, 38),
-(1, 5, 39);
+(1, 5, 39),
+(1, 40, 40),
+(3, 40, 41),
+(5, 40, 42),
+(11, 40, 43),
+(1, 41, 44),
+(1, 42, 45),
+(2, 42, 46),
+(8, 42, 47),
+(1, 43, 48),
+(2, 43, 49),
+(11, 43, 50),
+(1, 44, 51),
+(1, 45, 52),
+(5, 45, 53),
+(9, 45, 54),
+(4, 46, 55),
+(7, 46, 56),
+(8, 46, 57),
+(1, 47, 58),
+(6, 47, 59),
+(10, 47, 60);
 
 -- --------------------------------------------------------
 
@@ -320,6 +403,12 @@ ALTER TABLE `destacados`
   ADD KEY `fk_id_idx` (`id_prodDest`);
 
 --
+-- Indices de la tabla `galeria`
+--
+ALTER TABLE `galeria`
+  ADD PRIMARY KEY (`id_imagen`);
+ 
+--
 -- Indices de la tabla `migrations`
 --
 ALTER TABLE `migrations`
@@ -375,7 +464,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `admin_user`
 --
 ALTER TABLE `admin_user`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `categorias`
@@ -390,6 +479,12 @@ ALTER TABLE `destacados`
   MODIFY `id_destacados` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
+-- AUTO_INCREMENT de la tabla `galeria`
+--
+ALTER TABLE `galeria`
+  MODIFY `id_imagen` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+ 
+--
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
@@ -399,19 +494,19 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `nombrelink`
 --
 ALTER TABLE `nombrelink`
-  MODIFY `id_link` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_link` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_mate` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id_mate` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT de la tabla `producto_categoria`
 --
 ALTER TABLE `producto_categoria`
-  MODIFY `id_rel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id_rel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT de la tabla `users`

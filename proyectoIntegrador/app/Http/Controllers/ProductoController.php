@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\NombreLink;
 use App\Models\Producto;
+use App\Models\Galeria;
 use Illuminate\Http\Request;
 
 class ProductoController extends Controller
@@ -13,7 +14,8 @@ class ProductoController extends Controller
             $producto = Producto::where('id_mate', $queryLink)->first();
         else
             $producto = NombreLink::where('nombre_Link','LiKE', $queryLink)->with("producto")->first()->producto;
-        $producto->imgUrls = array("1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg"); //TODO
+        
+        $producto->imgUrls = Galeria::where('id_mate', $producto->id_mate)->pluck("imgUrl2")->toArray();
         return view("producto",["producto" => $producto]);
     }
 }

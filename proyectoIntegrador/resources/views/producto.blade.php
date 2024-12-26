@@ -4,8 +4,9 @@
 	<div class="d-flex flex-wrap flex-row mb-3 justify-content-center align-items-start gap-3">
 
         <div class="p-2 producto d-flex flex-wrap flex-row miniaturas-box gap-1">
+            <img src="{{asset('storage/'.$producto->imgUrl)}}" class="miniatura" alt="..." width="100px">
             @foreach($producto->imgUrls as $imgUrl)
-            <img src="{{ asset('storage/img/mates/' . $imgUrl) }}" class="miniatura" alt="..." width="100px">
+            <img src="{{ asset('storage/img/producto/' . $producto->id_mate . '/' . $imgUrl) }}" class="miniatura" alt="..." width="100px">
             @endforeach
 	    </div>
 
