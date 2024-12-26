@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-12-2024 a las 17:29:12
+-- Tiempo de generación: 26-12-2024 a las 19:39:38 manual
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -44,7 +44,8 @@ CREATE TABLE `admin_user` (
 --
 
 INSERT INTO `admin_user` (`id_admin`, `nombre`, `user_name`, `apellido`, `password`, `email`, `activo`, `updated_at`, `created_at`) VALUES
-(2, 'marcos', 'mbenegas', 'Benegas', '$2y$12$ijB2O2ILfTR1mAOMSaUnguhfn/Dsa02MLuqBt1mQZ29CLO247VL1.', 'correo@correo.com', NULL, '2024-12-18 04:20:24', '2024-12-18 04:20:24');
+(2, 'marcos', 'mbenegas', 'Benegas', '$2y$12$ijB2O2ILfTR1mAOMSaUnguhfn/Dsa02MLuqBt1mQZ29CLO247VL1.', 'correo@correo.com', NULL, '2024-12-18 04:20:24', '2024-12-18 04:20:24'),
+(3, 'pepe', 'pepe', 'pepe', '$2y$12$Z.WHP0rsCjyBDOmW2UO2I..viUz21rbxH0rwuGBSpiY//SRgfO1iW', 'pepe@pepe.pepe', NULL, '2024-12-26 17:35:56', '2024-12-26 17:35:56');
 
 -- --------------------------------------------------------
 
@@ -203,13 +204,13 @@ INSERT INTO `productos` (`id_mate`, `cantidad`, `descripcion`, `estado`, `elimin
 (2, 1, 'Mate Acero Térmico – MATERO MARWAL XL', 1, 0, 5500, '0000-00-00 00:00:00', '2024-12-25 21:03:04', 'img/1735160584_38.jpg'),
 (3, 50, 'Mate de cerámica artesanal', 1, 1, 350, '2024-12-01 00:00:00', '2024-12-23 15:26:03', 'https://ecommerce.com/img/mate-ceramica.jpg'),
 (4, 30, 'Mate de madera tallada con bombilla incluida', 1, 1, 450, '2024-12-01 00:00:00', '2024-12-23 15:27:53', 'https://ecommerce.com/img/mate-madera.jpg'),
-(5, 20, 'Mate de vidrio con detalles en acero inoxidable', 1, 0, 500, '2024-12-01 00:00:00', '2024-12-26 02:07:54', 'https://ecommerce.com/img/mate-vidrio.jpg'),
+(5, 20, 'Mate de vidrio con detalles en acero inoxidable', 1, 1, 500, '2024-12-01 00:00:00', '2024-12-26 02:07:54', 'https://ecommerce.com/img/mate-vidrio.jpg'),
 (6, 10, 'Set de mate premium con yerbera y bombilla', 0, 1, 1200, '2024-12-01 00:00:00', '2024-12-25 21:38:10', 'https://ecommerce.com/img/set-mate-premium.jpg'),
 (7, 40, 'Mate de acero inoxidable con doble capa térmica', 0, 1, 800, '2024-12-01 00:00:00', '2024-12-23 23:08:36', 'https://ecommerce.com/img/mate-acero.jpg'),
 (8, 3, 'Mate de acero', 1, 1, 20000, '2024-12-22 20:28:01', '2024-12-23 15:25:10', NULL),
 (27, 20, 'Mate de algarrobo', 1, 1, 10000, '2024-12-22 21:16:38', '2024-12-23 15:25:55', NULL),
-(28, 3, 'mate de ceramico', 1, 0, 10000, '2024-12-22 21:52:20', '2024-12-22 21:52:20', NULL),
-(29, 20, 'mate urbano', 1, 0, 10000, '2024-12-22 21:56:16', '2024-12-22 21:56:16', NULL),
+(28, 3, 'mate de ceramico', 1, 0, 10000, '2024-12-22 21:52:20', '2024-12-22 21:52:20', 'img/mates/8.jpg'),
+(29, 20, 'mate urbano', 1, 1, 10000, '2024-12-22 21:56:16', '2024-12-22 21:56:16', NULL),
 (38, 3, 'set de latas', 1, 0, 10000, '2024-12-24 00:42:36', '2024-12-24 01:14:23', 'img/1735000956_5-5-600x600.webp'),
 (39, 3, 'set de latas con mate', 1, 0, 10000, '2024-12-24 17:06:05', '2024-12-25 22:08:56', 'img/1735164536_4012.webp');
 

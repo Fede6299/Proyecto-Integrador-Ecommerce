@@ -10,7 +10,7 @@
 <div class="col-md-3">
 <?php echo $producto->nombre_Link ?>
   <div class="card" >
-    <a href="/productos/producto/<?php echo $producto->nombreLink->nombre_Link ?? "" ?>">
+    <a href="/productos/producto/<?php echo $producto->nombreLink->nombre_Link ?? $producto->id_mate ?>">
     <img src="{{asset('storage/'.$producto->imgUrl)}}" class="card-img-top" alt="...">
 
     <!-- <img src="{{ asset('storage/img/producto/mate.webp') }}" class="card-img-top" alt="..."> -->
@@ -28,7 +28,7 @@
       </p>
       <h5 class="card-title descripcion">{{$producto->descripcion}}</h5>
       <p class="card-text precio">${{$producto->precio}}</p>
-      <a type="button" class="btn btn-warning btn-naranja px-5" href="/productos/producto/<?php echo $producto->nombreLink->nombre_Link ??"" ?>">Ver más</a>
+      <a type="button" class="btn btn-warning btn-naranja px-5" href="/productos/producto/<?php echo $producto->nombreLink->nombre_Link ?? $producto->id_mate ?>">Ver más</a>
     </div>
   </div>
 </div>@endif

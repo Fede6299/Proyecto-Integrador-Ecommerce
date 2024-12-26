@@ -1,4 +1,4 @@
------set premium
+-----set premium 40
 Set Matero Premium Marfil
 Set de mate premium Marfil, de excelente terminacion, termo de litro de acero, 2 latas de 1/2kg. con pico vertedor, mate de vidrio, forrados en ecocuero  y bombilla de acero.
 
@@ -9,7 +9,7 @@ Set Matero Bolso Dama Turqueza
 Set Matero Bolso Dama Turqueza, set muy completo, termo de acero inoxidable de litro, 2 latas yerbera azucarera, mate y bombilla todo del mismo eco cuero.
 
 
------vidrio
+-----vidrio 41
 Mates-de-vidrio-copita-forrado
 Mates de vidrio forrado en simil cuero, ideal grabado laser para Regaleria Empresarial o Provincias del Interior.
 
@@ -24,7 +24,7 @@ Mates de vidrio forrado en vaqueta. Cuero vaqueta teñida colores marron oscuro,
 
 
 
---------acero
+--------acero 42
 Mate Imperial de Algarrobo Acero
 Mate en madera algarrobo, diseño imperial en acero inoxidable.
 
@@ -39,13 +39,13 @@ Mate mola acero 304, termico doble capa.
 
 Mate pary acero 304 con bombilla
 Mate pary acero 304 con bombilla.
--------termico
+-------termico 43
 Mate de Acero vaso termico negro
 Mate de acero vaso termico, doble chapa de acero pintado en negro mate.
 
 Mate de Acero vaso termico blanco
 Mate de Acero vaso termico, mate fabricado en doble chapa de acero .
---------ceramico
+--------ceramico 28
 
 Mate Quechua
 Mate quechua en ceramica base de silicona y bombilla de acero.
@@ -62,7 +62,7 @@ Mate de Cerámica c/ bombilla
 Mate de cerámica artesanal salpicado blanco y negro con bombilla negra .
 Diámetro 8 cm, Altura 9cm.
 
----------madera
+---------madera 44
 Mate Algarrobo pintado en caja
 Mate de madera algarrobo pintado en caja.
 
@@ -76,7 +76,7 @@ Mate de madera algarrobo huevito y alpaca.
 Mate madera con base de cuero y bombilla
 Mate madera de algarrobo con base de cuero y bombilla
 
------set clasico
+-----set clasico 45
 Set Matero Clasico eco cuero marfil
 Set Matero Clasico eco cuero marfil, set completo con termo bala en acero, latas mate y bombilla
 
@@ -86,14 +86,14 @@ Set Matero Clasico simil carpincho, set completo con termo acero inoxidablem lat
 Set Matero canasta eco cuero marron
 Set Matero canasta eco cuero marron, set muy completo
 
----- bomilla de alpaca
+---- bomilla de alpaca 46
 Bombilla Alpaca galloneada y soaje.
 Bombilla Alpaca galloneada y soaje.
 
 Bombilla Alpaca con baño de plata
 Bombilla en alpaca baño de plata, diferentes diseños
 
----- bombilla acero
+---- bombilla acero 46
 Bombilla acero pico loro doble caño
 Bombilla acero pico loro doble caño. bombilla caño reforzado.
 
