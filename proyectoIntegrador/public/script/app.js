@@ -1,4 +1,3 @@
-const input = document.getElementById('searchInput')
 const URL = window.location.origin;
 
 const buscar =async (query)=>{
@@ -26,6 +25,8 @@ const dropdownMenu = document.getElementById("dropdownMenu");
 // const items = Array.from(dropdownMenu.querySelectorAll("li"));
 
 const filterList = async()=> {
+    const input = document.getElementById('searchInput')
+
     const query = input.value.toLowerCase().trim().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g,'-');
     console.log(query);
     const data = await buscar(query);
@@ -116,3 +117,25 @@ document.querySelectorAll('.custom-control-check').forEach(check => {
         }      
     })
 })
+
+
+
+const buscarProductoAdmin = (e) =>{
+    e.preventDefault();
+    let input = document.getElementById("inputBuscarId").value;
+
+    console.log('buscando')
+    const query = input.toLowerCase().trim().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g,'-');
+
+    const form = e.target;
+    if(query){
+        form.action = `${URL}/administracion/dashboard/${query}`;
+    }else if(query === ''){
+        form.action = `${URL}/administracion/dashboard`;
+    }
+    form.submit();
+
+
+}
+
+

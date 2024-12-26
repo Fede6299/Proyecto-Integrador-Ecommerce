@@ -15,12 +15,14 @@ Route::get('/sobre-nosotros', [PaginaController::class,'sobreNosotros']);
 Route::get('/contacto',[PaginaController::class, 'contacto']);
 Route::get('/productos/producto/{nombreLink}',[ProductoController::class,'index'] );
 Route::get('/buscar/productos/{queryLink}', [BuscadorController::class,'buscarApi']);
+Route::get('/buscar/tablaProductos/{queryLink}', [BuscadorController::class,'buscarTabla']);
 
 
 //administracion
 Route::get('/administracion/login', [PaginaController::class, 'loginAdm']);
 Route::get('/administracion/registrar-usuario',[PaginaController::class,'registrar']);
 Route::get('/administracion/dashboard',[PaginaController::class,'adminProductos'])->middleware("auth");
+Route::get('/administracion/dashboard/{queryLink}', [BuscadorController::class,'buscarTabla']);
 Route::get('/administracion/dashboard/crear-producto',[PaginaController::class,'crearProducto'])->middleware("auth");
 Route::get('/producto/{producto}/editar-producto',[PaginaController::class,'editarProducto'])->middleware("auth");
 

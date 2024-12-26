@@ -7,8 +7,23 @@
   <a href="{{ url('/administracion/dashboard/crear-producto') }}" class="btn btn-dark">+ Nuevo producto</a>
 
 </section>
+<section style="max-width: 400px;">
+  <form  onsubmit="buscarProductoAdmin(event)">
+  <input 
+      type="text" 
+      class="form-control" 
+      placeholder="Buscar..." 
+      id="inputBuscarId" 
+      autocomplete="off" 
+  >
 
-<?php var_dump($productoDestacados)?>
+  <button>Buscar</button>
+  </form>
+
+
+</section>
+
+
 @if (session()->has("success"))
         <div class="container">
             <div class="alert alert-success text-center">{{ session("success") }}</div>
@@ -33,18 +48,16 @@
           @if($producto->eliminado != 1)
               <tr>
                   <th>  
-                     
                     <input
-                     type="checkbox"
+                      type="checkbox"
                       class="custom-control-check"
-                       data-id="{{$producto->id_mate}}" 
-                       <?php 
+                      data-id="{{$producto->id_mate}}" 
+                      <?php 
                         if(in_array($producto->id_mate, $productoDestacados)){
-                            echo "checked";
+                          echo "checked";
                         }
-                        else { echo "";}
-                ?>
-                       >
+                        else { echo "";}?>
+                    >
                   </th>
                   <th>{{ $producto->id_mate }}</th>
                   <th>{{ $producto->descripcion }}</th>
