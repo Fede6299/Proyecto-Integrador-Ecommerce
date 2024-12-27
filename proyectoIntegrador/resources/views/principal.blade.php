@@ -36,12 +36,35 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<section>
+<section class="productos_destacados">
   <h2>Productos destacados</h2>
-  @foreach($destacados as $destacado)
-  <h3>{{ $destacado->producto?->descripcion ?? 'Producto no disponible' }}</h3>
-    
-  @endforeach
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    @foreach($destacados as $destacado)
+    <div class="col">
+      <div class="card h-100">
+        <img src="{{asset('storage/'.$destacado->imgUrl)}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ $destacado->producto?->descripcion ?? 'Producto no disponible' }}</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <a type="button" class="btn btn-warning btn-naranja px-5">Ver más</a>
+        </div>
+      </div>
+    </div>
+    @endforeach
+  </div>
+</section>
+<section class="categorias">
+  <h2>Categorias</h2>
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    @foreach($categorias as $categoria)
+    <div class="col">
+      <a href="{{ url('/productos/' . $categoria->categoria) }}">
+        <img src="{{ asset('storage/img/categorias/' . $categoria->imagen) }}" class="img-fluid" alt="{{ $categoria->categoria }}">
+      </a>
+    </div>
+    @endforeach
+  </div>
+</section>
 </section>
 <section class="elements">
   <div>
@@ -59,10 +82,11 @@
     <p class="element-text">ENVIOS A TODO EL PAIS</p>
     <p class="sub-text">por el transporte de tu preferencia, en 72hs</p>
   </div>
+  <div>
+    <i class="las la-headset"></i>
+    <p class="element-text">ATENCIÓN AL CLIENTE</p>
+    <p class="sub-text">Lunes a viernes de 9 a 18hs</p>
+  </div>
 </section>
 
-
-
-
 @include('/layout/footer')
-

@@ -1,4 +1,28 @@
-.la-credit-card, .la-shopping-bag, .la-truck{
+.productos_destacados {
+    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+.productos_destacados h2{
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.categorias {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.categorias h2{
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    font-weight: bold;
+    justify-content: center;
+}
+.la-credit-card, .la-shopping-bag, .la-truck, .la-headset{
     font-size: 50px;
     color: black;
 }
