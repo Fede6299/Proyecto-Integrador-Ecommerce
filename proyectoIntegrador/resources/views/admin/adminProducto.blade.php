@@ -1,13 +1,13 @@
 @include('/layout/header')
 
-<section class="d-flex p-2 justify-content-between">
+<section class="d-flex p-2 justify-content-between align-items-center">
   <h2>Productos <span>{{count($productos)}}</span></h2>
 
 
-  <a href="{{ url('/administracion/dashboard/crear-producto') }}" class="btn btn-dark">+ Nuevo producto</a>
+  <a href="{{ url('/administracion/dashboard/crear-producto') }}" class=" nuevoProductoBtn">+ Nuevo producto</a>
 
 </section>
-<section class="searchSpace">
+<section class="searchSpace my-3">
   <form class="d-flex" onsubmit="buscarProductoAdmin(event)">
   <input 
       type="text" 
@@ -17,7 +17,7 @@
       autocomplete="off" 
   >
 
-  <button>Buscar</button>
+  <button class="botonProductBuscar">Buscar</button>
   </form>
 
 
@@ -29,7 +29,7 @@
             <div class="alert alert-success text-center">{{ session("success") }}</div>
         </div>
 @endif
-<table class="table">
+<table class="tablaProductos ">
   <thead>
     <tr>
       <th scope="col"> Destacado</th>
@@ -101,7 +101,7 @@
                       <form action="/producto/eliminar/{{ $producto->id_mate }}" method="post">
                           @csrf
                           @method("PUT")
-                          <button><i class="fa fa-trash"></i></button>
+                          <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                       </form>
                   </th>
               </tr>

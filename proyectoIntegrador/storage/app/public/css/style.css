@@ -440,6 +440,90 @@ input{
     color: #333;
 }
 /*-----------------------------------*/
+
+
+/*adminProducto*/
+.botonProductBuscar {
+    padding: 8px 16px; /* Ajuste para mejorar alineación */
+    background-color: #FF6A13;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .botonProductBuscar:hover {
+    background-color: #e05a0f;
+    transform: scale(1.05); /* Efecto visual adicional */
+  }
+
+
+  .nuevoProductoBtn {
+    padding: 8px 16px;
+    background-color: #FF6A13;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    display: inline-block; /* Asegura que se comporte como un botón */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .nuevoProductoBtn:hover {
+    background-color: #e05a0f;
+    transform: scale(1.05); /* Efecto de escalado */
+  }
+  
+
+
+  .tablaProductos {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    width: 100%;
+    border-collapse: collapse; /* Asegura que los bordes se fusionen */
+  }
+  
+  .tablaProductos th, .tablaProductos td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 8px; /* Espaciado interno para mejor legibilidad */
+  }
+  
+  .tablaProductos tbody tr:hover {
+    background-color: #eeeeee; /* Resalta la fila al pasar el mouse */
+  }
+  
+  .tablaProductos img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+
+  .searchSpace {
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchSpace .form-control {
+    flex-grow: 1;
+  }
+
+  .tablaProductos th {
+    font-family: Arial, sans-serif; /* Cambia la fuente a Arial */
+    font-size: 14px; /* Tamaño de fuente adecuado para encabezados */
+    font-weight: bold; /* Negrita para distinguir los encabezados */
+    text-align: center; /* Alineación centrada */
+    
+    padding: 10px; /* Espaciado interno */
+    border-bottom: 2px solid #ddd; /* Línea de separación entre encabezados y contenido */
+  }
+/*-----------------------------------*/
+
 /*Administraicon */
 
 .catSpace{
@@ -448,5 +532,3 @@ input{
 .searchSpace{
     max-width: 400px;
 }
-
-
