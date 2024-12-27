@@ -70,9 +70,11 @@ class UsuarioController extends Controller
 
 
         $file = $request->file("imagenPrincipal");
-        $nombre = time()."_".$file->getClientOriginalName();
-        $fileParth = $file->storeAs("img", $nombre,'public');
-        $datos["imgUrl"] = $fileParth;
+        if($file){
+            $nombre = time()."_".$file->getClientOriginalName();
+            $fileParth = $file->storeAs("img", $nombre,'public');
+            $datos["imgUrl"] = $fileParth;
+        }
 
 
         $datos["eliminado"] = 0;
@@ -81,10 +83,12 @@ class UsuarioController extends Controller
         $producto = Producto::create($datos);
 
         $filesSecundarias = $request->file("imagenesSecundarias");
-        foreach ($filesSecundarias as $file) {
-            $nombre = time() . "_" . $file->getClientOriginalName();
-            $filePath = $file->storeAs("img/producto/" . $producto->id_mate, $nombre, 'public');
-            Galeria::create(['id_mate' => $producto->id_mate, 'imgUrl2' => $nombre]);
+        if($filesSecundarias){
+            foreach ($filesSecundarias as $file) {
+                $nombre = time() . "_" . $file->getClientOriginalName();
+                $filePath = $file->storeAs("img/producto/" . $producto->id_mate, $nombre, 'public');
+                Galeria::create(['id_mate' => $producto->id_mate, 'imgUrl2' => $nombre]);
+            }
         }
 
         NombreLink::create([
@@ -128,6 +132,15 @@ class UsuarioController extends Controller
 
             $producto->imgUrl= $fileParth;
 
+        }
+
+        $filesSecundarias = $request->file("imagenesSecundarias");
+        if($filesSecundarias){
+            foreach ($filesSecundarias as $file) {
+                $nombre = time() . "_" . $file->getClientOriginalName();
+                $filePath = $file->storeAs("img/producto/" . $producto->id_mate, $nombre, 'public');
+                Galeria::create(['id_mate' => $producto->id_mate, 'imgUrl2' => $nombre]);
+            }
         }
         
         $producto->save();

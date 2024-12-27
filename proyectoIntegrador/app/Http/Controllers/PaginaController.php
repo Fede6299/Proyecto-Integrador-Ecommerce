@@ -6,6 +6,7 @@ use App\Models\Categoria;
 use App\Models\Destacados;
 use App\Models\NombreLink;
 use App\Models\Producto;
+use App\Models\Galeria;
 
 
 
@@ -66,11 +67,13 @@ class PaginaController extends Controller{
     }
     public function editarProducto(Producto $producto){
         $categorias = Categoria::all();
+        $nombresSecundarias = Galeria::where('id_mate', $producto->id_mate)->pluck("imgUrl2")->toArray();
 
         $parametros=[
             "categoria" => $categorias,
             "categorySelected" =>$producto->categorias->pluck("id_categoria")->toArray(),
-            "producto" => $producto
+            "producto" => $producto,
+            "secundariasActuales" => implode(', ', $nombresSecundarias)
         ];
 
         return view("admin.editarProducto",$parametros);
