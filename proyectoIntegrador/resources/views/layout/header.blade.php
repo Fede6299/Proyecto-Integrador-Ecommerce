@@ -61,13 +61,13 @@
             <!-- Input de búsqueda -->
                     <input 
                         type="text" 
-                        class="form-control" 
+                        class="form-control mb-0 " 
                         placeholder="Buscar..." 
                         id="searchInput" 
                         autocomplete="off" 
                         oninput="filterList()"
                     >
-                    <ul class="dropdown-menu bg-black width-search" aria-labelledby="dropdownMenuButton1" id="dropdownMenu">
+                    <ul class="dropdown-menu bg-black width-search scroll" aria-labelledby="dropdownMenuButton1" id="dropdownMenu">
                     </ul>
                 </section>
                 

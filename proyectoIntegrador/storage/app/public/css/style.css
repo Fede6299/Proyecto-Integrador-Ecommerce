@@ -26,6 +26,8 @@
 
 .dropdown-menu {
     background: black;
+    max-height: 400px;
+    overflow-y: scroll;
 }
 
 .dropdown-item:hover {
@@ -414,5 +416,13 @@ input{
     color: #333;
 }
 /*-----------------------------------*/
-  
+/*Administraicon */
+
+.catSpace{
+    max-width: 200px;
+}
+.searchSpace{
+    max-width: 400px;
+}
+
 

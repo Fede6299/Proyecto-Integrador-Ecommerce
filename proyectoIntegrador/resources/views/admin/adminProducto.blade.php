@@ -7,7 +7,7 @@
   <a href="{{ url('/administracion/dashboard/crear-producto') }}" class="btn btn-dark">+ Nuevo producto</a>
 
 </section>
-<section style="max-width: 400px;">
+<section class="searchSpace">
   <form class="d-flex" onsubmit="buscarProductoAdmin(event)">
   <input 
       type="text" 
@@ -75,7 +75,7 @@
                   </th>
                   <th>${{ $producto->precio }}</th>
                   <!-- corregir los estilos inline -->
-                  <th style="max-width: 200px;"> 
+                  <th class="catSpace"> 
                     <?php  
                     if($producto->categorias->isNotEmpty()){
                       foreach($producto->categorias as $categoria){
@@ -97,7 +97,7 @@
                   <th>
                     <img src="{{asset('storage/'.$producto->imgUrl)}}" alt="imagen" style="width: 50px;">
                   <th>
-                      <a href="/producto/{{ $producto->id_mate }}/editar-producto"><i class="fa fa-edit"></i></a>
+                      <a href="/administracion/dashboard/{{ $producto->id_mate }}/editar-producto"><i class="fa fa-edit"></i></a>
                       <form action="/producto/eliminar/{{ $producto->id_mate }}" method="post">
                           @csrf
                           @method("PUT")

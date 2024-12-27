@@ -21,6 +21,10 @@
         </div>
     </div>
 
+    <div>
+        <p>ingrese imagenes del producto</p>
+    </div>
+
 
     <!-- <select style="width:300px" name="field2" id="field2" placeholder="search" multiple multiselect-search="true"  multiselect-max-items="3" onchange="console.log(this.selectedOptions)"> -->
 
