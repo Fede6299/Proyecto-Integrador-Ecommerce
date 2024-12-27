@@ -42,7 +42,7 @@
     @foreach($destacados as $destacado)
     <div class="col">
       <div class="card h-100">
-        <img src="{{asset('storage/'.$destacado->imgUrl)}}" class="card-img-top" alt="...">
+        <img src="{{asset('storage/'.$destacado->producto->imgUrl)}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{ $destacado->producto?->descripcion ?? 'Producto no disponible' }}</h5>
           <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -59,7 +59,7 @@
     @foreach($categorias as $categoria)
     <div class="col">
       <a href="{{ url('/productos/' . $categoria->categoria) }}">
-        <img src="{{ asset('storage/img/categorias/' . $categoria->imagen) }}" class="img-fluid" alt="{{ $categoria->categoria }}">
+        <img src="{{ asset('storage/img/categorias/' . $categoria->id_categoria .".webp") }}" class="img-fluid" alt="{{ $categoria->categoria }}">
       </a>
     </div>
     @endforeach
@@ -90,3 +90,4 @@
 </section>
 
 @include('/layout/footer')
+

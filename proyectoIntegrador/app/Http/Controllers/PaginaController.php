@@ -12,15 +12,22 @@ use App\Models\Galeria;
 
 class PaginaController extends Controller{
     public function index(){
-        $destacados = Destacados::all();
-    
-        return view("principal",["destacados" => $destacados]);
+        $destacados = Destacados::with("producto")->get();
+        $ids = [1, 3, 4, 5];
+        $categorias = Categoria::whereIn('id_categoria', $ids)
+            ->take(4)
+            ->get();
+        $parametros=[
+            "destacados" => $destacados,
+            "categorias" => $categorias
+        ];
+        return view("principal", $parametros);
     }
     
     public function catProductos($categoria_nombre){
  
         if($categoria_nombre != "ver-todo"){
-            $productos =Producto::whereHas('categorias', function ($query) use ($categoria_nombre)  {
+            $productos = Producto::whereHas('categorias', function ($query) use ($categoria_nombre) {
                 $query->where('categorias.categoria','LIKE', "$categoria_nombre");
             })->get();
         }else{
