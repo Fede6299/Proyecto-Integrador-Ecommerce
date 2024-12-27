@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\NombreLink;
 use App\Models\Producto;
 use App\Models\User;
+use App\Models\Galeria;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -78,6 +79,13 @@ class UsuarioController extends Controller
 
         $datos["estado"] = 1;
         $producto = Producto::create($datos);
+
+        $filesSecundarias = $request->file("imagenesSecundarias");
+        foreach ($filesSecundarias as $file) {
+            $nombre = time() . "_" . $file->getClientOriginalName();
+            $filePath = $file->storeAs("img/producto/" . $producto->id_mate, $nombre, 'public');
+            Galeria::create(['id_mate' => $producto->id_mate, 'imgUrl2' => $nombre]);
+        }
 
         NombreLink::create([
              "nombre_Link" => Str::slug($datos["descripcion"]),
