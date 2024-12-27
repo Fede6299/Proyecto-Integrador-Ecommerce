@@ -39,6 +39,8 @@
 <section>
   <h2>Productos destacados</h2>
   @foreach($destacados as $destacado)
+  <?php var_dump($destacado); ?>
+
   <h3>{{ $destacado->producto?->descripcion ?? 'Producto no disponible' }}</h3>
     
   @endforeach

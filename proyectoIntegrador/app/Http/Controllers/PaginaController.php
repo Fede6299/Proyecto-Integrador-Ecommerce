@@ -12,8 +12,7 @@ use App\Models\Galeria;
 
 class PaginaController extends Controller{
     public function index(){
-        $destacados = Destacados::all();
-    
+        $destacados = Destacados::with("producto")->get();;
         return view("principal",["destacados" => $destacados]);
     }
     
