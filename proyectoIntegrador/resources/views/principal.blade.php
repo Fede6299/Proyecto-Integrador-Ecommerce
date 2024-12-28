@@ -56,7 +56,7 @@
 <section class="categorias">
   <h2>Categorias</h2>
   <div class="row row-cols-1 row-cols-md-4 g-4">
-    @foreach($categorias as $categoria)
+    @foreach($categoriasIndex as $categoria)
     <div class="col">
       <a href="{{ url('/productos/' . $categoria->categoria) }}">
         <img src="{{ asset('storage/img/categorias/' . $categoria->id_categoria .".webp") }}" class="img-fluid" alt="{{ $categoria->categoria }}">

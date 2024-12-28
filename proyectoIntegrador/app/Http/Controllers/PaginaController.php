@@ -14,11 +14,13 @@ class PaginaController extends Controller{
     public function index(){
         $destacados = Destacados::with("producto")->get();
         $ids = [1, 3, 4, 5];
-        $categorias = Categoria::whereIn('id_categoria', $ids)
+        $categoriasIndex = Categoria::whereIn('id_categoria', $ids)
             ->take(4)
             ->get();
+        $categorias= Categoria::all();
         $parametros=[
             "destacados" => $destacados,
+            "categoriasIndex" => $categoriasIndex,
             "categorias" => $categorias
         ];
         return view("principal", $parametros);
