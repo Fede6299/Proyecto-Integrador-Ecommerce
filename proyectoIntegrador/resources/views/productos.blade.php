@@ -1,5 +1,5 @@
 @include('/layout/header')
-<h2>Productos {{ $categoria_id}} </h2>
+<h2>Productos {{ $categoria_id }} </h2>
 <h2 class="tituloContacto">Nuestro catálogo</h2>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -33,7 +33,7 @@
 </div>
 
 <!-- Agrega los enlaces de paginación -->
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center pag-naranja">
     {{ $productos->links('pagination::bootstrap-4') }}
 </div>
 
