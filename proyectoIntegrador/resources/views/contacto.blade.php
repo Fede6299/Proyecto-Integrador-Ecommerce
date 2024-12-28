@@ -7,17 +7,25 @@
                 
                 <h2 class="tituloContacto">Formulario de contacto</h2>
             </div>
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            
+
+            <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="">
+            <label for="floatingInput">Nombre</label>
             </div>
-            <div class="form-group">
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+            <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="">
+            <label for="floatingInput">Apellido</label>
             </div>
-            <div class="form-group" style="grid-column: span 2;">
-                <label for="telefono">Número de teléfono</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" required>
+            
+       
+            <div class="form-floating mb-3" style="grid-column: span 2;">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Número de teléfono</label>
+            </div>
+            <div class="form-floating mb-3" style="grid-column: span 2;">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
             </div>
             <div class="form-group" style="grid-column: span 2;">
                 <label for="comentarios">Comentarios</label>

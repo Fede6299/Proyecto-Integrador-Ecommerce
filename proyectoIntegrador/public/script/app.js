@@ -102,20 +102,30 @@ function displaySelectedImage(event, elementId) {
             },
             body:JSON.stringify({id:id})
         }).then(res => res.json()).then(data => console.log(data))
-        console.log(id)
+    }
+    let count = 0;
+document.querySelectorAll('.custom-control-check').forEach(check => {
+    if(check.checked){
+        count++;
     }
 
-document.querySelectorAll('.custom-control-check').forEach(check => {
     check.addEventListener('change',()=>{
         const id = check.getAttribute('data-id')
-        if(check.checked){
+        if(check.checked && count < 4   ){
+            count++;
+
             apiDest('/check-dest',id)
-        }else{
+            console.log(count)
+        }else if(!check.checked){
+            count--;
             console.log('desmarcado')
             apiDest('/check-dest-delete',id)
-
-        }      
+            console.log(count)
+        }
+        
     })
+    console.log(count)
+    
 })
 
 
