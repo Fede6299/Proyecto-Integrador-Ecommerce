@@ -105,26 +105,40 @@ function displaySelectedImage(event, elementId) {
     }
     let count = 0;
 document.querySelectorAll('.custom-control-check').forEach(check => {
-    if(check.checked){
-        count++;
-    }
+    
 
     check.addEventListener('change',()=>{
-        const id = check.getAttribute('data-id')
-        if(check.checked && count < 4   ){
-            count++;
 
-            apiDest('/check-dest',id)
-            console.log(count)
-        }else if(!check.checked){
-            count--;
+        const id = check.getAttribute('data-id')
+
+        if(check.checked){
+            
+            if(count < 4){
+                apiDest('/check-dest',id)
+                count++;
+            } else{
+                check.checked = false;
+                alert("Solo puedes seleccionar 4 productos")
+            }
+            
+            // console.log(count)
+        }else {
+            
             console.log('desmarcado')
-            apiDest('/check-dest-delete',id)
-            console.log(count)
+            // if(count < 4 ) {
+               
+                apiDest('/check-dest-delete',id)
+                count--;
+            // };
+            // console.log(count)
         }
         
     })
-    console.log(count)
+    if(check.checked){
+        count++;
+        console.log(count)
+    }
+    // console.log(count)
     
 })
 
