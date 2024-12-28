@@ -7,8 +7,7 @@ use App\Models\Producto;
 use App\Models\Galeria;
 use Illuminate\Http\Request;
 
-class ProductoController extends Controller
-{
+class ProductoController extends Controller{
     public function index($queryLink){
         if(is_numeric($queryLink))
             $producto = Producto::where('id_mate', $queryLink)->first();
