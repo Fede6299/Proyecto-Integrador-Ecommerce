@@ -15,7 +15,7 @@
                 alt="example placeholder" style="width: 300px;" />
             </div>
             <div class="d-flex justify-content-center">
-                <div data-mdb-ripple-init class="btn btn-primary btn-rounded">
+                <div data-mdb-ripple-init class="btn btn-primary btn-rounded botonProductBuscar">
                     <label class="form-label text-white m-1" for="customFile1">Elegir imagen</label>
                     <input type="file" name="imagenPrincipal" class="form-control d-none" id="customFile1" onchange="displaySelectedImage(event, 'selectedImage')" />
                 </div>
