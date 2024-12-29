@@ -28,11 +28,13 @@ class PaginaController extends Controller{
     
     public function catProductos($categoria_nombre){
         if($categoria_nombre != "ver-todo"){
-            $productos = Producto::whereHas('categorias', function ($query) use ($categoria_nombre) {
+            $productos = Producto::where('eliminado', 0)->whereHas('categorias', function ($query) use ($categoria_nombre) {
                 $query->where('categorias.categoria','LIKE', "$categoria_nombre");
             })->paginate(8);
         } else {
-            $productos = Producto::with("categorias")->paginate(8);
+            $productos = Producto::where('eliminado', 0)
+            ->with("categorias")
+            ->paginate(8);
         }
 
         $parametros = [
