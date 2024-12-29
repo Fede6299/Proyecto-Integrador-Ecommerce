@@ -16,7 +16,7 @@ Route::get('/contacto',[PaginaController::class, 'contacto']);
 Route::get('/productos/producto/{nombreLink}',[ProductoController::class,'index'] );
 Route::get('/buscar/productos/{queryLink}', [BuscadorController::class,'buscarApi']);
 Route::get('/buscar/tablaProductos/{queryLink}', [BuscadorController::class,'buscarTabla']);
-
+Route::post('/enviarContacto',[PaginaController::class,'enviarContacto']);
 
 //administracion
 Route::get('/administracion/login', [PaginaController::class, 'loginAdm']);

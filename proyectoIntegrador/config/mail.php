@@ -36,6 +36,7 @@ return [
     */
 
     'mailers' => [
+        'default' => env('MAIL_MAILER', 'smtp'),
 
         'smtp' => [
             'transport' => 'smtp',

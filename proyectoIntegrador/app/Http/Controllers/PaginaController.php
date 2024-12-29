@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\PostCreateMail;
 use App\Models\Categoria;
 use App\Models\Destacados;
-use App\Models\NombreLink;
 use App\Models\Producto;
 use App\Models\Galeria;
-
-
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PaginaController extends Controller{
     public function index(){
@@ -87,4 +87,18 @@ class PaginaController extends Controller{
 
         return view("admin.editarProducto",$parametros);
     }
+    public function enviarContacto (Request $request){
+        
+
+        $datos = [
+            "nombre"=> $request->nombre,
+            "apellido"=>$request->apellido,
+            "telefono"=>$request->telefono,
+            "email"=> $request->email,
+            "comentario"=> $request->comentario,
+        ];
+        Mail::to('administracion@correo.com')->send(new PostCreateMail($datos));
+        return redirect()->back()->with('success', 'Correo enviado correctamente.');
+    }
+
 }
