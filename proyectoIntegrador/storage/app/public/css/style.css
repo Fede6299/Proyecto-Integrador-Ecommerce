@@ -110,16 +110,25 @@
 a{
     text-decoration: none;
 }
+
 /* SOBRE NOSOTROS*/
 
 .tituloNosotros{
-    color: #000;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 40px; /* 125% */
+    text-align: center;
+    font-size: 30px;
+   
+    margin: 10px ;
+    font-family: Arial; 
+    color: #333;
 
 }
+.divisionSobreNosotros {
+    width: 300px; 
+    height: 3px; 
+    background-color: #ffc107; 
+    margin: 20px auto;
+}
+
 .lead {
     text-align: justify;
     line-height: 1.6; /* Espaciado entre líneas */
@@ -141,6 +150,36 @@ a{
     justify-content: center; /* Centra los elementos verticalmente */
     align-items: center; /* Centra los elementos horizontalmente */
   }
+
+
+.descripcion {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555; /* Gris oscuro para legibilidad */
+    text-align: left;
+    background: #f9f9f9; /* Fondo claro */
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd; /* Borde sutil */
+}
+
+.tituloCadaIntegrante{
+    text-align: center;
+    font-size: 30px;
+   
+    margin: 10px ;
+    font-family: Arial; 
+    color: #333
+}
+ /* Centra las imagenes de perfil. */ 
+.bd-placeholder-img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* --------------------------------------------------------------------------- */
+
 
 
 /* CONTACTOS*/
