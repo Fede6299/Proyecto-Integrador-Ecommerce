@@ -25,7 +25,7 @@
          </div>
   
         <div class="col-lg-3">
-                <img src="./img/marcos.png" alt="Descripción de la imagen" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                <img src="./img/marcos.webp" alt="Descripción de la imagen" class="bd-placeholder-img rounded-circle" width="140" height="140">
                 <h2 class="tituloCadaIntegrante">Marcos</h2>
                 <p class="descripcion">Administró la base de datos e integró la comunicación entre backend y frontend. Lideró el desarrollo del backend implementando funcionalidades clave.</p>
                 <p><a class="btn btn-secondary botonSobreNosotros" href="/descargar/CV_Marcos_Benegas">Descargar CV »</a></p>
