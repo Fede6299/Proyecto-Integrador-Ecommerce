@@ -63,9 +63,21 @@
     border:none;
 }
 
+.categoria-text {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1;
+  }
 
 /* Estilo base de los enlaces */
-
 
 .text-light a,.logoutButton {
     text-decoration: none; /* Sin subrayado predeterminado */
