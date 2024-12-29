@@ -95,11 +95,11 @@
 
                   </th>
                   <th>
-                    <img src="{{asset('storage/'.$producto->imgUrl)}}" alt="imagen" style="width: 50px;">
+                    <img src="{{asset('storage/'.$producto->imgUrl)}}" alt="imagen" style="max-width: 50px;">
                   <th >
-                    <div class="d-flex gap-3">
+                    <div class="acciones d-flex justify-content-around">
                     <a href="/administracion/dashboard/{{ $producto->id_mate }}/editar-producto">
-                      <button><i class="fa fa-edit"></i></button>
+                      <i class="fa fa-edit"></i>
                       </a>
                       <form action="/producto/eliminar/{{ $producto->id_mate }}" method="post">
                           @csrf

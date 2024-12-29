@@ -542,6 +542,20 @@ input{
     padding: 10px; /* Espaciado interno */
     border-bottom: 2px solid #ddd; /* Línea de separación entre encabezados y contenido */
   }
+  
+.fa-edit {
+    font-size: 2rem;
+}
+
+.fa-edit, .fa-trash-alt {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #c47249;
+}
+
+.acciones {
+    align-items: center;
+}
 /*-----------------------------------*/
 
 /*Administraicon */

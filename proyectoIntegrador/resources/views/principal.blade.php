@@ -40,6 +40,7 @@
   <h2>Productos destacados</h2>
   <div class="row row-cols-1 row-cols-md-4 g-4">
     @foreach($destacados as $destacado)
+    @if ($destacado->producto->estado != 0 && $destacado->producto->eliminado != 1)
     <div class="col">
       <div class="card h-100">
         <img src="{{asset('storage/'.$destacado->producto->imgUrl)}}" class="card-img-top" alt="...">
@@ -50,6 +51,7 @@
         </div>
       </div>
     </div>
+    @endif
     @endforeach
   </div>
 </section>
