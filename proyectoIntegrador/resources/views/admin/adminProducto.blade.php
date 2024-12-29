@@ -29,6 +29,10 @@
             <div class="alert alert-success text-center">{{ session("success") }}</div>
         </div>
 @endif
+
+
+
+
 <table class="tablaProductos ">
   <thead>
     <tr>
@@ -46,6 +50,9 @@
       <tbody class="table-group-divider">
           @foreach($productos as $producto)
           @if($producto->eliminado != 1)
+
+          
+          
               <tr>
                   <th>  
                     <input
@@ -60,7 +67,9 @@
                     >
                   </th>
                   <th>{{ $producto->id_mate }}</th>
+
                   <th>{{ $producto->descripcion }}</th>
+
                   <th>{{ $producto->cantidad }}</th>
                   <th>
                     <?php 
@@ -101,16 +110,50 @@
                     <a href="/administracion/dashboard/{{ $producto->id_mate }}/editar-producto">
                       <i class="fa fa-edit"></i>
                       </a>
-                      <form action="/producto/eliminar/{{ $producto->id_mate }}" method="post">
+
+
+                       <!-- Modal -->
+              <div class="modal fade" id="{{ $producto->id_mate }}Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">¿Desea eliminar el producto?</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <p>{{ $producto->descripcion }}</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                          <form action="/producto/eliminar/{{ $producto->id_mate }}" method="post">
+                            @csrf
+                            @method("PUT")
+                            <button class=" btn btn-primary  btn-danger">Eliminar</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Fin del modal -->
+
+
+
+                      <!-- <form action="/producto/eliminar/{{ $producto->id_mate }}" method="post">
                           @csrf
-                          @method("PUT")
-                          <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
-                      </form>
+                          @method("PUT") -->
+                          <button  data-bs-toggle="modal" data-bs-target="#{{ $producto->id_mate }}Modal" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                      <!-- </form> -->
                     </div>
                       
                   </th>
+              
+             
+
               </tr>
+              
+           
               @endif
+           
           @endforeach
       </tbody>
   </table>
