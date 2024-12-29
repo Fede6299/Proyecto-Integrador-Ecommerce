@@ -13,28 +13,28 @@
         <div class="col-lg-3">
                  <img src="./img/fede.png" alt="Descripción de la imagen" class="bd-placeholder-img rounded-circle" width="140" height="140">
                  <h2 class="tituloCadaIntegrante">Fede</h2>
-                 <p class="descripcion">Descripción breve</p>
+                 <p class="descripcion"> Desarrolló el frontend de la vista de inicio, incluyendo productos destacados y categorías. También trabajó en el backend para mostrar dinámicamente estos elementos desde la base de datos.</p>
                  <p><a class="btn btn-secondary" href="#">Descargar CV »</a></p>
         </div>
   
          <div class="col-lg-3">
                 <img src="./img/gab.png" alt="Descripción de la imagen" class="bd-placeholder-img rounded-circle" width="140" height="140">
                 <h2 class="tituloCadaIntegrante">Gabi</h2>
-                <p class="descripcion">Encargada del diseño y desarrollo frontend, se encargó de dar estilo a cada sección de la página. Aseguró que la interfaz sea clara y funcional para brindar una experiencia óptima al usuario.</p>
+                <p class="descripcion">Diseñó y desarrolló el frontend de las vistas "Sobre nosotros", "Contacto", "Administración", "Login" y "Registro de usuario", asegurando una interfaz clara y funcional.</p>
                 <p><a class="btn btn-secondary" href="#">Descargar CV »</a></p>
          </div>
   
         <div class="col-lg-3">
                 <img src="./img/marcos.png" alt="Descripción de la imagen" class="bd-placeholder-img rounded-circle" width="140" height="140">
                 <h2 class="tituloCadaIntegrante">Marcos</h2>
-                <p class="descripcion">Encargado de la administración de la base de datos, integró la comunicación entre el backend y frontend. Además, lideró el desarrollo implementando funcionalidades clave para el proyecto.</p>
+                <p class="descripcion">Administró la base de datos e integró la comunicación entre backend y frontend. Lideró el desarrollo del backend implementando funcionalidades clave.</p>
                 <p><a class="btn btn-secondary botonSobreNosotros" href="/descargar/CV_Marcos_Benegas">Descargar CV »</a></p>
         </div>
 
         <div class="col-lg-3">
                 <img src="./img/nico.jpg" alt="Descripción de la imagen" class="bd-placeholder-img rounded-circle" width="140" height="140">
                 <h2 class="tituloCadaIntegrante">Nico</h2>
-                <p class="descripcion">Descripción breve</p>
+                <p class="descripcion">Implementó la galería de imágenes y la vista de productos, integrando el backend y la base de datos para mostrar los productos de manera clara y organizada.</p>
                 <p><a class="btn btn-secondary botonSobreNosotros" href="#">Descargar CV »</a></p>
         </div>
     </div><!-- /.row -->
