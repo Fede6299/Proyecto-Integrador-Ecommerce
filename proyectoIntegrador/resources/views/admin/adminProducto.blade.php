@@ -96,13 +96,18 @@
                   </th>
                   <th>
                     <img src="{{asset('storage/'.$producto->imgUrl)}}" alt="imagen" style="width: 50px;">
-                  <th>
-                      <a href="/administracion/dashboard/{{ $producto->id_mate }}/editar-producto"><i class="fa fa-edit"></i></a>
+                  <th >
+                    <div class="d-flex gap-3">
+                    <a href="/administracion/dashboard/{{ $producto->id_mate }}/editar-producto">
+                      <button><i class="fa fa-edit"></i></button>
+                      </a>
                       <form action="/producto/eliminar/{{ $producto->id_mate }}" method="post">
                           @csrf
                           @method("PUT")
                           <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
                       </form>
+                    </div>
+                      
                   </th>
               </tr>
               @endif
