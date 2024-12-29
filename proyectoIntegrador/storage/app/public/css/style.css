@@ -270,6 +270,26 @@ padding: 5px 5px;
     /* width: 125px; */
 }
 
+.pag-naranja {
+    margin-top: 20px;
+}
+
+.page-item.active .page-link {
+    background-color: #F39B6D;
+    border-color: #F39B6D;
+    color: white;
+}
+
+.page-link {
+    color: #F39B6D;
+}
+
+.page-link:hover {
+    background-color: #F39B6D;
+    border-color: #F39B6D;
+    color: white;
+}
+
 /* PRODUCTO INDIVIDUAL */
 
 .producto {
