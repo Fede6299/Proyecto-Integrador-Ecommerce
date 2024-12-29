@@ -3,6 +3,7 @@
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
 @foreach($productos as $producto)
+
 @if ($producto->estado != 0 && $producto->eliminado != 1)
 <div class="col-md-3">
 <?php echo $producto->nombre_Link ?>
