@@ -160,6 +160,19 @@ a{
     font-family: Arial; 
     color: #333;
 }
+.divisionAmarilla {
+    width: 120px; 
+    height: 3px; 
+    background-color: #ffc107; 
+    margin: 10px auto;}
+.subtituloContacto{
+    text-align: center;
+    font-size: 20px;
+    margin: 10px ;
+    font-family: Arial; 
+    color: #333;
+
+}
 .contact-form-container {
     background-color: #fff; /* Fondo blanco para el formulario */
     padding: 30px;
@@ -214,6 +227,39 @@ input, textarea {
 .botonEnviar:hover {
     background-color: #e05a0f;
 }
+
+
+.datosContacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a una nueva línea si no hay espacio */
+    gap: 1rem; /* Espacio entre los elementos */
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.dato {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre los elementos */
+}
+
+.icono {
+    font-size: 20px; /* Tamaño del ícono */
+    color: #212529; /* Color del ícono */
+}
+
+.titulo {
+    font-weight: bold;
+    color: #333;
+   
+}
+
+.detalle {
+    color: #ffc107; /* Amarillo para los datos */
+}
+
 /*-----------------------------------*/
 
 
