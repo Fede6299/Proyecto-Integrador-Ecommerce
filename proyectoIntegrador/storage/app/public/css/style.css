@@ -568,6 +568,11 @@ input{
 .acciones {
     align-items: center;
 }
+
+.miniaturasEditProducto {
+    max-height: 324px;
+}
+
 /*-----------------------------------*/
 
 /*Administraicon */

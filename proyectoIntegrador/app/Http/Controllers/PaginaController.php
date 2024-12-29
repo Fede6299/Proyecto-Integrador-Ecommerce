@@ -84,7 +84,7 @@ class PaginaController extends Controller{
             "categoria" => $categorias,
             "categorySelected" =>$producto->categorias->pluck("id_categoria")->toArray(),
             "producto" => $producto,
-            "secundariasActuales" => implode(', ', $nombresSecundarias)
+            "secundariasActuales" => $nombresSecundarias
         ];
 
         return view("admin.editarProducto",$parametros);
