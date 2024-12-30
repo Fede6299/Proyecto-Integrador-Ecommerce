@@ -50,7 +50,7 @@
 
 .dropdown-menu {
     background: black;
-    max-height: 400px;
+    max-height: 350px;
     overflow-y: scroll;
 }
 
