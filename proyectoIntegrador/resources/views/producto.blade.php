@@ -27,7 +27,7 @@
                 </p>
                 <!-- Otros elementos de la tarjeta -->
                 <div class="mt-auto">
-                    <p class="btn btn-secondary"><a href="{{ url('/productos/ver-todo') }}" style="text-decoration: none; color: white;">Volver atras</a></p>
+                    <p class="btn btn-secondary"><a  style="text-decoration: none; color: white;">Comprar Ahora</a></p>
                 </div>
             </div>
         </div>
