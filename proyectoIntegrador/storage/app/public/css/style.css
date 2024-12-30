@@ -349,7 +349,10 @@ padding: 5px 5px;
     font-weight: 500;
     font-family: Inter;
 }
-
+.titleNav{
+    margin: 0 120px;
+    
+}
 .precio{
     font-size: 20px;
     font-weight: 550;
