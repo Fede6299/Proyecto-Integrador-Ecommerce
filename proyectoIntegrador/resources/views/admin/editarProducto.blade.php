@@ -93,5 +93,5 @@
 </div>
 
 </form>
-<script type="text/javascript" src="{{ asset('storage/js/script.js') }}"></script>
+
 @include('/layout/footer')

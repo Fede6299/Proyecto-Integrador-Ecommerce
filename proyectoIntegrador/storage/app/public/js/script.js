@@ -34,7 +34,7 @@ if(inputImagenes){
     displayImagenes.value = fileNames;
   });
 }
-const URL = window.location.origin;
+const URLroot = window.location.origin;
 
 const secundariasBox = document.getElementById("secundariasBox");
 if(secundariasBox){
@@ -43,7 +43,7 @@ if(secundariasBox){
   
   iconos.forEach(icon => {
     icon.onclick = function(e) {
-      var url = `${URL}/producto/1/imagen/` + icon.id
+      var url = `${URLroot}/producto/1/imagen/` + icon.id
       fetch(url, {method: "DELETE", headers: { 'X-CSRF-TOKEN': csrfToken }})
         .then(response => {
           console.log(response.json());
