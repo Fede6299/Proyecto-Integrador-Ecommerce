@@ -68,7 +68,7 @@
     width: 80%;
     top: 50%;
     left: 50%;
-    font-size: 2rem;
+    font-size: 25px;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.2);
     color: white;
@@ -357,6 +357,11 @@ padding: 5px 5px;
 
 .card-img-top {
     border-bottom: 1px solid black;
+    height: 214px;
+    width: 212px;
+}
+.contentCard{
+    max-width: 214px;
 }
 
 .btn-naranja {

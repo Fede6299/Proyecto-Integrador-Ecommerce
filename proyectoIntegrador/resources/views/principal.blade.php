@@ -41,13 +41,14 @@
   <div class="row row-cols-1 row-cols-md-4 g-4">
     @foreach($destacados as $destacado)
     @if ($destacado->producto->estado != 0 && $destacado->producto->eliminado != 1)
-    <div class="col">
-      <div class="card h-100">
-        <img src="{{asset('storage/'.$destacado->producto->imgUrl)}}" class="card-img-top" alt="...">
+    <div class="col d-flex justify-content-center">
+      <div class="card h-100 contentCard">
+        <img src="{{asset('storage/'.$destacado->producto->imgUrl)}}"  class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{ $destacado->producto?->descripcion ?? 'Producto no disponible' }}</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <a type="button" class="btn btn-warning btn-naranja px-5">Ver más</a>
+          <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+
+          <a type="button" href="{{asset('/productos/producto/'.$destacado->producto->nombreLink->nombre_Link)}}" class="btn btn-warning btn-naranja px-5">Ver más</a>
         </div>
       </div>
     </div>
@@ -62,7 +63,7 @@
     <div class="col text-center position-relative">
       <a href="{{ url('/productos/' . $categoria->categoria) }}">
         <p class="categoria-text">{{ $categoria->categoria }}</p>
-        <img src="{{ asset('storage/img/categorias/' . $categoria->id_categoria .".webp") }}" class="img-fluid" alt="{{ $categoria->categoria }}">
+        <img src="{{ asset('storage/img/categorias/' . $categoria->id_categoria .'.webp') }}" class="img-fluid" alt="{{ $categoria->categoria }}">
       </a>
     </div>
     @endforeach
