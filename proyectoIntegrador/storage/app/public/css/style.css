@@ -913,7 +913,14 @@ input{
     
     display: block;
 }
-
+.botonesCrearProducto{
+    display: flex !important;
+    justify-content: space-between !important;
+    gap: 20px;
+}
+.botonesCrearProducto a{
+    margin: 0;
+}
 /*-----------------------------------*/
 
 /*Administraicon */

@@ -80,9 +80,18 @@
 
     </select>
 
+<div>
 
-    <button class="editarProducto-botonFinal">Guardar</button>
-    <a type="button" class="btn btn-secondary boton-cancelar" href="{{ url('/administracion/dashboard/') }}">Cancelar</a>
+<div class="botonesCrearProducto">
+    <div>
+            <a type="button" class="btn btn-secondary boton-cancelar" href="{{ url('/administracion/dashboard/') }}">Cancelar</a>
+
+    </div>
+    <div>
+            <button class="editarProducto-botonFinal">Guardar</button>
+    </div>
+</div>
+
 </form>
 <script type="text/javascript" src="{{ asset('storage/js/script.js') }}"></script>
 @include('/layout/footer')
