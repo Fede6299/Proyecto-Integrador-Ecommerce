@@ -758,7 +758,6 @@ input{
     width: 100px;
 
     /* Nueva alineación a la derecha */
-    margin-left: auto;
     display: block;
 }
 
