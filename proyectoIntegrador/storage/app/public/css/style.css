@@ -665,6 +665,102 @@ input{
 
 /*-----------------------------------*/
 
+/*CREAR PRODUCTO*/
+.tituloCrearProducto{
+    text-align: center;
+    font-size: 30px;
+    margin: 20px ;
+    font-family: Arial; 
+    color: #333;
+}
+
+.cargaDeProducto-button {
+    padding: 5px 10px;
+    background-color: #FF6A13;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-self: start;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.cargaDeProducto-button:hover {
+    background-color: #e05a0f;
+}
+.crearProducto {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.crearProducto input, .crearProducto select, .crearProducto button:not(.crearProducto-botonFinal) {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.crearProducto input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.crearProducto select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.crearProducto p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.crearProducto img#selectedImage {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.crearProducto .d-flex {
+    flex-direction: column;
+    align-items: center;
+}
+
+.crearProducto .d-flex.flex-row {
+    flex-direction: row;
+    justify-content: space-between;
+}
+.crearProducto-botonFinal {
+    margin: 10px 10px 0px 180px; /* Espaciado vertical */
+    padding: 8px 10px;
+    background-color: #FF6A13;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100px;
+
+    /* Nueva alineación a la derecha */
+    margin-left: auto;
+    display: block;
+}
+
+/*-----------------------------------*/
+
 /*Administraicon */
 
 .catSpace{
