@@ -4,9 +4,17 @@
 <h2 class="tituloCrearProducto">Crear producto</h2>
     @csrf
     <input name="descripcion" placeholder="Descripción">
+    @error("descripcion")
+                <p style="color: red;">{{$message}}</p>
+            @enderror
     <input name="precio" placeholder="Precio">
+    @error("precio")
+                <p style="color: red;">{{$message}}</p>
+            @enderror
     <input name="cantidad" placeholder="Cantidad">
-
+    @error("cantidad")
+                <p style="color: red;">{{$message}}</p>
+            @enderror
     <div class="d-flex flex-row mb-4 gap-3">
         <div>
             <p>Imagen Principal</p>
