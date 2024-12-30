@@ -34,7 +34,7 @@
         <div>
             <p style="width: 200px;">Imágenes Secundarias </p>
 
-            <label class="form-label m-1" for="secundariasBox">@if($galeria) Imágenes actuales @else No tiene @endif</label>
+            <label class="form-label m-1" for="secundariasBox">@if($galeria->isEmpty()) No tiene @else Imágenes actuales @endif</label>
             <div class="p-2 d-flex flex-wrap flex-column miniaturasEditProducto gap-1 align-items-end secundarias-box" id="secundariasBox"> 
                 @foreach($galeria as $item)
                 <div>
