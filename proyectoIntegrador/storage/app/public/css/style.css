@@ -54,6 +54,10 @@
     overflow-y: scroll;
 }
 
+.dropdown-menu::-webkit-scrollbar {
+    display: none;
+}
+
 .dropdown-item:hover {
     background-color: black;
 }
