@@ -11,7 +11,7 @@
     <div class="row ">
         
         <div class="col-lg-3">
-                 <img src="./img/fede.png" alt="Descripción de la imagen" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                 <img src="./img/fede.jpg" alt="Descripción de la imagen" class="bd-placeholder-img rounded-circle" width="140" height="140">
                  <h2 class="tituloCadaIntegrante">Fede</h2>
                  <p class="descripcion"> Desarrolló el frontend de la vista de inicio, incluyendo productos destacados y categorías. También trabajó en el backend para mostrar dinámicamente estos elementos desde la base de datos.</p>
                  <p><a class="btn btn-secondary" href="#">Descargar CV »</a></p>
