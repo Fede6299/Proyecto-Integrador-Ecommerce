@@ -54,9 +54,28 @@
     overflow-y: scroll;
 }
 
-.dropdown-menu::-webkit-scrollbar {
+/* .dropdown-menu::-webkit-scrollbar {
     display: none;
+} */
+
+/* Personalización del scrollbar */
+.dropdown-menu::-webkit-scrollbar {
+    width: 8px; /* Ancho de la scrollbar */
 }
+
+.dropdown-menu::-webkit-scrollbar-track {
+    background: #000; /* Fondo del track (negro en este caso) */
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background-color: #814925; /* Color del thumb (marrón en este caso) */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background-color: #aa6930; /* Color del thumb al pasar el mouse */
+}
+
 
 .dropdown-item:hover {
     background-color: black;
