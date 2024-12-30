@@ -58,7 +58,7 @@ class PaginaController extends Controller{
         return view("admin.registro");
     }
     public function adminProductos(){
-        $productos = Producto::with("categorias")->get();
+        $productos = Producto::where('eliminado', 0)->with("categorias")->get();
         $destacados = Destacados::all()->pluck("id_prodDest")->toArray();
 
         $parametros=[

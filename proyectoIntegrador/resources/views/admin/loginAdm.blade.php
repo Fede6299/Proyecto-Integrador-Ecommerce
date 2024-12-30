@@ -1,12 +1,17 @@
 @include('/layout/header')
-
-<div class="login-form-container">
-
-    @if (session()->has("success"))
+@if (session()->has("success"))
         <div class="container">
             <div class="login-alert-success text-center">{{ session("success") }}</div>
         </div>
     @endif
+    @if (session()->has("fail"))
+        <div class="container">
+            <div class="alert alert-danger text-center">{{ session("fail") }}</div>
+        </div>
+      @endif
+<div class="login-form-container">
+
+    
     <form class="login-form" method="POST" action="/loginUser">
     <h2 class="tituloLogin">Acceder</h2>
         @csrf

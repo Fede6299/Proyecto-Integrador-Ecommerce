@@ -23,7 +23,7 @@ class UsuarioController extends Controller
         if(Auth::attempt($datos)){
             return response()->redirectTo("/administracion/dashboard");
         }else{
-            return response()->redirectTo("/")->with("fail","error no se pudo logear");
+            return response()->redirectTo("/administracion/login")->with("fail","error no se pudo logear");
         }
 
         return response()->redirectTo("/");
