@@ -42,13 +42,14 @@
     @foreach($destacados as $destacado)
     @if ($destacado->producto->estado != 0 && $destacado->producto->eliminado != 1)
     <div class="col d-flex justify-content-center">
-      <div class="card h-100 contentCard">
-        <img src="{{asset('storage/'.$destacado->producto->imgUrl)}}"  class="card-img-top" alt="...">
-        <div class="card-body">
+      <div class="card h-100 contentCard d-flex flex-column">
+        <img src="{{asset('storage/'.$destacado->producto->imgUrl)}}" class="card-img-top" alt="...">
+        <div class="card-body d-flex flex-column">
           <h5 class="card-title">{{ $destacado->producto?->descripcion ?? 'Producto no disponible' }}</h5>
           <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
-
-          <a type="button" href="{{asset('/productos/producto/'.$destacado->producto->nombreLink->nombre_Link)}}" class="btn btn-warning btn-naranja px-5">Ver más</a>
+          <div class="mt-auto">
+            <a type="button" href="{{asset('/productos/producto/'.$destacado->producto->nombreLink->nombre_Link)}}" class="btn btn-warning btn-naranja px-5">Ver más</a>
+          </div>
         </div>
       </div>
     </div>
