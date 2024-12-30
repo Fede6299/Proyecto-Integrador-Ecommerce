@@ -1,7 +1,8 @@
 @include('/layout/header')
-<h2>Editar</h2>
-<p>{{$producto->descripcion}}</p>
-<form action="/editar/{{$producto->id_mate}}" method="post" class="w-25" enctype="multipart/form-data">
+
+<form action="/editar/{{$producto->id_mate}}" method="post" class="editarProducto" enctype="multipart/form-data">
+<h2 class="tituloEditarProducto">Editar</h2>
+<p class="descripcionProducto">{{$producto->descripcion}}</p>
     @csrf
     @method("PUT")
     <input name="descripcion" value="{{old('descripcion', $producto->descripcion)}}" placeholder="descripcion">
@@ -25,7 +26,7 @@
                 @endif
             </div>
             <div class="d-flex justify-content-center">
-                <div data-mdb-ripple-init class="btn btn-primary btn-rounded">
+                <div data-mdb-ripple-init class="editarProducto-button">
                     <label class="form-label text-white m-1" for="customFile1">Choose file</label>
                     <input type="file" name="imagenPrincipal" class="form-control d-none" id="customFile1" onchange="displaySelectedImage(event, 'selectedImage')" />
                 </div>
@@ -45,7 +46,7 @@
             </div>
             <input type="text" id="secundariasNames" readonly class="mb-4 d-flex justify-content-center" placeholder="Elige nuevas para ver" />
             <div class="d-flex justify-content-center">
-                <div data-mdb-ripple-init class="btn btn-primary btn-rounded">
+                <div data-mdb-ripple-init class="editarProducto-button">
                     <label class="form-label text-white m-1" for="customFiles2">Agregar imágenes</label>
                     <input type="file" multiple name="imagenesSecundarias[]" class="form-control d-none" id="customFiles2" />
                 </div>
@@ -71,7 +72,7 @@
     </select>
 
 
-    <button class="btn btn-dark">Guardar</button>
+    <button class="editarProducto-botonFinal">Guardar</button>
 </form>
 <script type="text/javascript" src="{{ asset('storage/js/script.js') }}"></script>
 @include('/layout/footer')
