@@ -151,4 +151,22 @@ class UsuarioController extends Controller
         $producto->save();
         return redirect("/administracion/dashboard")->with("success", "Se elimino el producto de forma correcta");
     }
+
+    public function eliminarImagen(Int $productoid, Int $imagenid, Request $request){
+        $responseDB = Galeria::destroy($imagenid);
+        if ($responseDB) {
+            return response()->json([
+                'status' => 1,
+                'msg' => 'success'
+            ]);
+        } else {
+            return response()->json([
+                'status' => 0,
+                'msg' => 'fail'
+            ]);
+        }
+        //$path = 'storage/img/producto/' . $productoid . '/' . $item->imgUrl2;
+        //TODO elimiar imagen del filesystem
+        return redirect("/administracion/dashboard")->with("success", "Se elimino el producto de forma correcta");
+    }
 }

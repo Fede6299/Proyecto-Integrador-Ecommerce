@@ -689,6 +689,23 @@ input{
     max-height: 324px;
 }
 
+.borrador{
+    position: absolute;
+    bottom:0;
+    right:0;
+    color: red;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.secundarias-box div{
+    position: relative;
+}
+
+.secundarias-box img{
+    /* display: block; */
+}
+
 /*-----------------------------------*/
 
 /*CREAR PRODUCTO*/

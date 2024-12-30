@@ -34,3 +34,22 @@ if(inputImagenes){
     displayImagenes.value = fileNames;
   });
 }
+
+const secundariasBox = document.getElementById("secundariasBox");
+if(secundariasBox){
+  const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+  const iconos = secundariasBox.querySelectorAll('i');
+  
+  iconos.forEach(icon => {
+    icon.onclick = function(e) {
+      var url = "http://localhost:8000/producto/1/imagen/" + icon.id
+      fetch(url, {method: "DELETE", headers: { 'X-CSRF-TOKEN': csrfToken }})
+        .then(response => {
+          console.log(response.json());
+          icon.parentNode.setAttribute("hidden", '')
+        })
+        .catch(err => console.log(err))
+    }
+  });
+
+}
