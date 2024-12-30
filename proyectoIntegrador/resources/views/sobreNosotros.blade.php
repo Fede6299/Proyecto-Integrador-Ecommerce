@@ -18,8 +18,8 @@
         </div>
   
          <div class="col-lg-3">
-                <img src="./img/gab.png" alt="Descripción de la imagen" class="bd-placeholder-img rounded-circle" width="140" height="140">
-                <h2 class="tituloCadaIntegrante">Gabi</h2>
+                <img src="./img/gabi.webp" alt="Descripción de la imagen" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                <h2 class="tituloCadaIntegrante">Gabriela</h2>
                 <p class="descripcion">Diseñó y desarrolló el frontend de las vistas "Sobre nosotros", "Contacto", "Administración", "Login" y "Registro de usuario", asegurando una interfaz clara y funcional.</p>
                 <p><a class="btn btn-secondary" href="#">Descargar CV »</a></p>
          </div>
