@@ -35,7 +35,7 @@
                 <img src="./img/nico.jpg" alt="Descripción de la imagen" class="bd-placeholder-img rounded-circle" width="140" height="140">
                 <h2 class="tituloCadaIntegrante">Nico</h2>
                 <p class="descripcion">Implementó la galería de imágenes y la vista de productos, integrando el backend y la base de datos para mostrar los productos de manera clara y organizada.</p>
-                <p><a class="btn btn-secondary botonSobreNosotros" href="#">Descargar CV »</a></p>
+                <p><a class="btn btn-secondary botonSobreNosotros" href="/descargar/CV_Nicolas_Androchuk">Descargar CV »</a></p>
         </div>
     </div><!-- /.row -->
     
