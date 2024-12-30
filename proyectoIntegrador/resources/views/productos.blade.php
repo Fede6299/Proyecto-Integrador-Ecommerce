@@ -7,11 +7,11 @@
 @if ($producto->estado != 0 && $producto->eliminado != 1)
 <div class="col-md-3">
 <?php echo $producto->nombre_Link ?>
-  <div class="card h-100">
+  <div class="card h-100 d-flex flex-column">
     <a href="/productos/producto/<?php echo $producto->nombreLink->nombre_Link ?? $producto->id_mate ?>">
     <img src="{{asset('storage/'.$producto->imgUrl)}}" class="card-img-top" alt="...">
     </a>
-    <div class="card-body">
+    <div class="card-body d-flex flex-column">
       <p class="card-text categoria mb-1">
         <?php 
           if($producto->categorias->isNotEmpty())
@@ -24,7 +24,9 @@
       </p>
       <h5 class="card-title descripcion">{{$producto->descripcion}}</h5>
       <p class="card-text precio">${{$producto->precio}}</p>
-      <a type="button" class="btn btn-warning btn-naranja px-5" href="/productos/producto/<?php echo $producto->nombreLink->nombre_Link ?? $producto->id_mate ?>">Ver más</a>
+      <div class="mt-auto">
+        <a type="button" class="btn btn-warning btn-naranja px-5" href="/productos/producto/<?php echo $producto->nombreLink->nombre_Link ?? $producto->id_mate ?>">Ver más</a>
+      </div>
     </div>
   </div>
 </div>
