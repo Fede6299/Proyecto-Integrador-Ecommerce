@@ -11,12 +11,16 @@ class BuscadorController extends Controller
 {
     public function buscarApi ($queryLink){
 
-        $productosBusqueda = NombreLink::where('nombre_Link', 'LiKE' ,"%$queryLink%")->with("producto")->get();
+        $productosBusqueda = NombreLink::where('nombre_Link', 'LiKE' ,"%$queryLink%")->whereHas('producto', function ($query){
+            $query->where('eliminado', 0)->where('estado', 1);
+        })->with("producto")->get();
         
         return response()->json($productosBusqueda);
     }
     public function buscarTabla($queryLink){
-        $productos = NombreLink::where('nombre_Link', 'LIKE', "%$queryLink%")->with(['producto.categorias'])->get();
+        $productos = NombreLink::where('nombre_Link', 'LIKE', "%$queryLink%")->whereHas('producto', function ($query){
+            $query->where('eliminado', 0);
+        })->with(['producto.categorias'])->get();
         $destacados = Destacados::all()->pluck("id_prodDest")->toArray();
         $productosS = $productos->pluck("producto");
         // var_dump($productosS);
