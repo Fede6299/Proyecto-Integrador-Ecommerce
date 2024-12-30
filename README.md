@@ -4,6 +4,9 @@
 
 ## Web Full Stack - 2024
 
+### Diseño
+- [Figma](https://www.figma.com/design/luK1jGL1J6QmhD7JhP2phC/Proyecto-integrador?node-id=0-1&p=f&t=XUrP8VFVBpVwp6bp-0)
+
 ### Requerimientos
 - [Instalar XAMPP](https://www.apachefriends.org/es/index.html)
 - [Instalar Composer](https://getcomposer.org/download/)
