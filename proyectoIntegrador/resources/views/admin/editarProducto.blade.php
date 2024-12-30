@@ -34,10 +34,13 @@
         <div>
             <p style="width: 200px;">Imágenes Secundarias </p>
 
-            <label class="form-label m-1" for="actualesNames">@if($secundariasActuales) Imágenes actuales @else No tiene @endif</label>
-            <div class="p-2 d-flex flex-wrap flex-column miniaturasEditProducto gap-1" id="actualesNames"> 
-                @foreach($secundariasActuales as $imgUrl)
-                <img src="{{ asset('storage/img/producto/' . $producto->id_mate . '/' . $imgUrl) }}" class="miniatura" alt="..." width="100px">
+            <label class="form-label m-1" for="secundariasBox">@if($galeria) Imágenes actuales @else No tiene @endif</label>
+            <div class="p-2 d-flex flex-wrap flex-column miniaturasEditProducto gap-1 align-items-end secundarias-box" id="secundariasBox"> 
+                @foreach($galeria as $item)
+                <div>
+                    <img src="{{ asset('storage/img/producto/' . $producto->id_mate . '/' . $item->imgUrl2) }}" class="miniatura" alt="..." width="100px">
+                    <i class="fa fa-times borrador" id="{{$item->id_imagen}}"></i>
+                </div>
                 @endforeach
             </div>
             <input type="text" id="secundariasNames" readonly class="mb-4 d-flex justify-content-center" placeholder="Elige nuevas para ver" />

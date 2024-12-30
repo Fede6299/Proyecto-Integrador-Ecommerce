@@ -78,13 +78,13 @@ class PaginaController extends Controller{
     }
     public function editarProducto(Producto $producto){
         $categorias = Categoria::all();
-        $nombresSecundarias = Galeria::where('id_mate', $producto->id_mate)->pluck("imgUrl2")->toArray();
+        $galeria = Galeria::where('id_mate', $producto->id_mate)->get();
 
         $parametros=[
             "categoria" => $categorias,
             "categorySelected" =>$producto->categorias->pluck("id_categoria")->toArray(),
             "producto" => $producto,
-            "secundariasActuales" => $nombresSecundarias
+            "galeria" => $galeria
         ];
 
         return view("admin.editarProducto",$parametros);
