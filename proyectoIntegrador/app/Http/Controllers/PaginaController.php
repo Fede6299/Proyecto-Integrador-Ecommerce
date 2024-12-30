@@ -91,14 +91,26 @@ class PaginaController extends Controller{
     }
     public function enviarContacto (Request $request){
         
+        $datos = $request->validate([
+            "nombre" =>["required"],
+            "apellido"=>["required"],
+            "telefono"=> ["required"],
+            "email" => ["required"],
+            "comentario" => ["nullable"]
+        ],[
+            "nombre.required" => "Este campo es obligatorio!",
+            "apellido.required" => "Este campo es obligatorio!",
+            "telefono.required" => "Este campo es obligatorio!",
+            "email.required" => "Este campo es obligatorio!",
 
-        $datos = [
-            "nombre"=> $request->nombre,
-            "apellido"=>$request->apellido,
-            "telefono"=>$request->telefono,
-            "email"=> $request->email,
-            "comentario"=> $request->comentario,
-        ];
+        ]);
+        // $datos = [
+        //     "nombre"=> $request->nombre,
+        //     "apellido"=>$request->apellido,
+        //     "telefono"=>$request->telefono,
+        //     "email"=> $request->email,
+        //     "comentario"=> $request->comentario,
+        // ];
         Mail::to('administracion@correo.com')->send(new PostCreateMail($datos));
         return redirect()->back()->with('success', 'Correo enviado correctamente.');
     }

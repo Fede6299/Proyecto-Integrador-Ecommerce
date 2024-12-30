@@ -68,7 +68,10 @@
                   </th>
                   <th>{{ $producto->id_mate }}</th>
 
-                  <th>{{ $producto->descripcion }}</th>
+                  <th>
+                    <a style="text-decoration: none; color:rgb(33, 37, 41);" href="{{asset('/productos/producto/'.$producto->nombreLink->nombre_Link)}}">{{ $producto->descripcion }}</a>
+                    
+                  </th>
 
                   <th>{{ $producto->cantidad }}</th>
                   <th>

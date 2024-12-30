@@ -13,22 +13,34 @@
             
 
             <div class="form-floating mb-3">
-            <input type="text" name="nombre" class="form-control" id="floatingInput" placeholder="">
+            <input type="text" name="nombre" class="form-control" id="floatingInput" placeholder="" require>
             <label for="floatingInput">Nombre</label>
+            @error('nombre')
+                <div style="color: red;">{{ $message }}</div>
+            @enderror
             </div>
             <div class="form-floating mb-3">
-            <input type="text" name="apellido" class="form-control" id="floatingInput" placeholder="">
+            <input type="text" name="apellido" class="form-control" id="floatingInput" placeholder="" require>
             <label for="floatingInput">Apellido</label>
+            @error('apellido')
+                <div style="color: red;">{{ $message }}</div>
+            @enderror
             </div>
             
        
             <div class="form-floating mb-3" style="grid-column: span 2;">
-                <input type="number"name="telefono" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="number"name="telefono" class="form-control" id="floatingInput" placeholder="name@example.com" require>
                 <label for="floatingInput">Número de teléfono</label>
+                @error('telefono')
+                <div style="color: red;">{{ $message }}</div>
+            @enderror
             </div>
             <div class="form-floating mb-3" style="grid-column: span 2;">
                 <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email</label>
+                @error('email')
+                <div style="color: red;">{{ $message }}</div>
+            @enderror
             </div>
       
             <div class="form-floating" style="grid-column: span 2;">
