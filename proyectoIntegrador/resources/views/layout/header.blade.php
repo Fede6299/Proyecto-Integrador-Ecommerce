@@ -6,7 +6,7 @@
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Tienda mates</title>
+        <title>Mattioli</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <!-- Fonts -->
         <link rel="stylesheet" href="{{ asset('storage/css/style.css') }}">
@@ -22,7 +22,7 @@
         <body class="font-sans antialiased dark:bg-black dark:text-white/50">
             <header class="bg-black navbar h-100 d-flex justify-content-around" >
             <a href="{{ url('/') }}">
-                <h1 class="text-light navbar-brand mx-0 p-0">Tienda mates</h1>
+                <h1 class="text-light navbar-brand mx-0 p-0">Mattioli</h1>
 
             </a>    
 
