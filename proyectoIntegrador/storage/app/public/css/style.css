@@ -801,6 +801,10 @@ input{
     display: block;
 }
 
+.boton-cancelar{
+    margin: 10px 10px 0px 188px;
+}
+
 /*-----------------------------------*/
 
 /*EDITAR PRODUCTO*/

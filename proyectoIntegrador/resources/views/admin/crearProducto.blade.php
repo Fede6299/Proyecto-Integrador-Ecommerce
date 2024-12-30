@@ -49,6 +49,8 @@
         
     </select>
     <button class="crearProducto-botonFinal">Crear</button>
+    <a type="button" class="btn btn-secondary boton-cancelar" href="{{ url('/administracion/dashboard/') }}">Cancelar</a>
+
 
 </form>
 
